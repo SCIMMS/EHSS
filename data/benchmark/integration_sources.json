@@ -1,0 +1,99 @@
+[
+  {
+    "path": "output\\ehss_cpu_reuse_20260910\\summary.json",
+    "sha256": "e1cdb2c677f13bbc6d6f30dd8b5c495a78c9bae0315d9d8b80f7472e8ece3a63"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1CRN\\dynamics.json",
+    "sha256": "4c2b8b725842ccbf783b77f341b2b2389f027e28b459f10dcbd27c4304227df6"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1CRN\\preparation.json",
+    "sha256": "874e3afacb820ca802dbd788dd87fffedc9c3149b7aeec9a5b0af65b4d5c3805"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1CRN\\trajectory.npz",
+    "sha256": "af194442fc293931d51193dfd2a3874ccabcca81a91fe76f57569a2ae9f4aedd"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1LYZ\\dynamics.json",
+    "sha256": "b304ba731b50528a742dcced24512d482f09c19555fbf14edbe47189eef31f66"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1LYZ\\preparation.json",
+    "sha256": "ae88a5b556a38bc5c9f69e1253e591c756556fc225ac9f5ffeac07dbf46f14b0"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\1LYZ\\trajectory.npz",
+    "sha256": "c96ae382817679548a7fe57d4e8c65cc5e4f0e80df62dd2baa6b1e5f6ef51f95"
+  },
+  {
+    "path": "output\\ehss_expansion_md_20260909\\protocol.json",
+    "sha256": "0312b42570284238538cf694aa24f523617febf05f0f62fa0d5f91e2825a0f5f"
+  },
+  {
+    "path": "output\\ehss_native_ablation_20260913\\cap4096_bridge\\summary.json",
+    "sha256": "4ff19311d50b239ad5da948e86b7a0c699f4c10516b9366cf87783e5e7c499d6"
+  },
+  {
+    "path": "output\\ehss_native_ablation_20260913\\summary.json",
+    "sha256": "c6b3ff96ede9d0167e01bed23e8352428aedab2ce93833b9e58270e4647320b8"
+  },
+  {
+    "path": "output\\ehss_publication_panel_20260913\\own_holdout_v1\\summary.json",
+    "sha256": "439f9c2f0d01e584bf921478e5219af2b15a2ff24ae2d1530ad85247d5565112"
+  },
+  {
+    "path": "output\\ehss_publication_panel_20260913\\panel_manifest.json",
+    "sha256": "2a60869a8085bb59791a1171813dc85719163b4486931ac5f1b7c2c49c7d8b0f"
+  },
+  {
+    "path": "output\\ehss_publication_panel_20260913\\references_v1\\summary.json",
+    "sha256": "88263bca9b3de423ae61b3186aadb9ebbd79e17ee914e3e625dae7171fadb404"
+  },
+  {
+    "path": "output\\ehss_publication_reproducibility_20260914\\validation_v4.json",
+    "sha256": "d38e59895a7176d8197311af94a03b8659903827d6aefc8358a0c0044c6c4685"
+  },
+  {
+    "path": "output\\ehss_sampling_convergence_20260913\\analysis.json",
+    "sha256": "a069730933558575ef7bcab60923bc7926a775946cc3375106a68599e5f6b2f6"
+  },
+  {
+    "path": "output\\ehss_scaling_local_20260913\\references.csv",
+    "sha256": "988d826e6b2e8bdff6b99a3141c8e32e0abc1d44ca73764dd5e9c18d8caa0a4b"
+  },
+  {
+    "path": "output\\imos113_stage_c_20260913\\stage_c_summary.json",
+    "sha256": "b1e12783ee526685551b43bf02a0ddab526f33aeba3959eead9b3cb9910539bd"
+  },
+  {
+    "path": "output\\imos113_stage_g_20260914\\frozen_selection.json",
+    "sha256": "781fdc5b7b49d234d06d70564c0f7de8fb31d971a356866d60626453d1a25d76"
+  },
+  {
+    "path": "output\\imos113_stage_g_20260914\\returned\\results\\final_rows.json",
+    "sha256": "1bd375dd25105f0cc4db58b6c139992818bdc895c430789724d751ca1c11aff7"
+  },
+  {
+    "path": "output\\imos113_stage_g_20260914\\stage_g_summary.json",
+    "sha256": "65ba6ca438c10fd9a6a16949b645348359c95905a5110d8cee7c0fee287d5452"
+  },
+  {
+    "path": "writing\\ehss_jcim_20260912\\cpu_ablation_verified.csv",
+    "sha256": "02f7aac852425638a891dd4ec177aaa8c142f5af1fb733141e3398259ce78a62"
+  },
+  {
+    "path": "writing\\ehss_jcim_20260912\\md_reuse_excerpt.csv",
+    "sha256": "0b050c2f70b5f4baa10e1451509b980a6a2cda48445cce4af4c4d4b5e9a45f68"
+  },
+  {
+    "path": "writing\\ehss_jcim_20260912\\pa_equal_target_excerpt.csv",
+    "sha256": "0ba668c6b6a512e1553b15ce47a2000e538efc6af40578a482019ef460b71008"
+  },
+  {
+    "path": "C:\\Users\\tnvlaos456\\Documents\\SAXS simulation\\manuscript_rewrite_txt\\M Kim et al - JSR v01-R9.docx",
+    "sha256": "2cd24325782b1ef1262ad990a2220589322dddf64db573b2a0adc4f2023fb6a3",
+    "use": "Affiliations, funding and COI only; requested three-author list takes precedence"
+  }
+]

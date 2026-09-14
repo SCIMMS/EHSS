@@ -1,0 +1,19 @@
+{
+  "no_new_numerical_experiments": true,
+  "main_tables": 2,
+  "si_tables": 8,
+  "main_words": 4621,
+  "expected_placeholders": [
+    "DATA-01",
+    "CONTRIB-01",
+    "ACK-01"
+  ],
+  "authors": [
+    "Minsu Kim",
+    "Minwook Hwang",
+    "Jongcheol Seo"
+  ],
+  "correspondence": "jongcheol.seo@postech.ac.kr",
+  "funding_coi_exact_from_jsr": true,
+  "source_snapshot_sha256": "22e9f66d61447cb20e02b28784c2eb0e35de652b1b23dbe2bde2665380784645"
+}

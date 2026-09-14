@@ -1,0 +1,10 @@
+{
+  "pattern_scan_complete": true,
+  "counts": {
+    "files": 279,
+    "archive_members": 15315
+  },
+  "high_confidence_pattern_hits": [],
+  "forbidden_runtime_or_key_files": [],
+  "limitation": "Finite high-confidence pattern scan; not a formal secret detector. Historical paths and machine labels are intentionally retained in archived provenance."
+}

@@ -1,0 +1,46 @@
+{
+  "complete": true,
+  "no_new_numerical_experiments": true,
+  "raw_final_estimates": 720,
+  "final_cells": 36,
+  "estimates_per_cell": 20,
+  "accuracy_csv_rederived_from_raw": true,
+  "accuracy_counts": {
+    "own": {
+      "pass": 17,
+      "uncertain": 1
+    },
+    "imos": {
+      "uncertain": 2,
+      "pass": 16
+    }
+  },
+  "timing_conditions": 19,
+  "timing_blocks_per_condition": 5,
+  "process_medians_rederived": true,
+  "jointly_passing_structures": 15,
+  "qualified_single_ratio_range": [
+    2.583243498873927,
+    14.550659257942485
+  ],
+  "provenance_sources_verified": 24,
+  "exact_jsr_funding_coi": true,
+  "remaining_metadata_placeholders": [
+    "DATA-01",
+    "CONTRIB-01",
+    "ACK-01"
+  ],
+  "docx_tables": {
+    "main": 2,
+    "si": 8
+  },
+  "editable_math_equations": 4,
+  "pdf_pages": {
+    "Kim_et_al_JCIM_EHSS_v02": 15,
+    "Kim_et_al_JCIM_EHSS_SI_v02": 13
+  },
+  "all_final_pages_visually_reviewed": true,
+  "ehssrot_direct_comparison_in_scope": false,
+  "evidence_snapshot_sha256": "22e9f66d61447cb20e02b28784c2eb0e35de652b1b23dbe2bde2665380784645",
+  "prior_offline_validation_complete": true
+}

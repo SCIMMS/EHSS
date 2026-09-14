@@ -1,0 +1,27 @@
+{
+  "entries": [
+    [
+      "1CRN",
+      104101
+    ],
+    [
+      "1LYZ",
+      104201
+    ],
+    [
+      "4AKE",
+      104301
+    ]
+  ],
+  "openmm": "8.6",
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+  "temperature_K": 300.0,
+  "timestep_ps": 0.002,
+  "friction_per_ps": 1.0,
+  "equilibration_steps": 1000,
+  "production_steps": 8192,
+  "minimization_max_iterations": 2000,
+  "minimization_tolerance_kj_mol_nm": 10.0,
+  "forcefield": "Serialized verified ff14SB/OBC2 systems; NoCutoff; HBonds; dielectric 1/78.5.",
+  "scope": "Short geometry-update controls. Not converged solution or gas-phase CCS ensembles. Transport uses original heavy atoms only."
+}

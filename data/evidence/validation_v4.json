@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "commands": [
+    {
+      "command": "verify_snapshot.py",
+      "returncode": 0,
+      "elapsed_s": 60.42823409999255
+    },
+    {
+      "command": "scripts/analyze_ehss_native_ablation.py",
+      "returncode": 0,
+      "elapsed_s": 2.3915536999702454
+    },
+    {
+      "command": "scripts/analyze_ehss_panel_own_holdout.py",
+      "returncode": 0,
+      "elapsed_s": 1.9683960999827832
+    },
+    {
+      "command": "scripts/audit_ehss_panel_references.py",
+      "returncode": 0,
+      "elapsed_s": 5.962645799969323
+    },
+    {
+      "command": "scripts/analyze_imos113_stage_c.py",
+      "returncode": 0,
+      "elapsed_s": 12.016125500027556
+    },
+    {
+      "command": "scripts/analyze_imos113_stage_d.py",
+      "returncode": 0,
+      "elapsed_s": 2.364039700012654
+    },
+    {
+      "command": "scripts/analyze_imos113_stage_e.py",
+      "returncode": 0,
+      "elapsed_s": 2.6248585000284947
+    },
+    {
+      "command": "scripts/audit_imos113_stage_f_completion.py",
+      "returncode": 0,
+      "elapsed_s": 4.713028099969961
+    },
+    {
+      "command": "scripts/analyze_imos113_stage_g.py",
+      "returncode": 0,
+      "elapsed_s": 6.516075499996077
+    },
+    {
+      "command": "scripts/analyze_ehss_sampling_convergence.py",
+      "returncode": 0,
+      "elapsed_s": 13.664654200023506
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "output/imos113_stage_c_20260913/stage_c_summary.json",
+      "json_exact": true
+    },
+    {
+      "path": "output/imos113_stage_d_20260913/stage_d_summary.json",
+      "json_exact": true
+    },
+    {
+      "path": "output/imos113_stage_e_20260913/stage_e_summary.json",
+      "json_exact": true
+    },
+    {
+      "path": "output/imos113_stage_f_recovery_20260913/completion_audit.json",
+      "json_exact": true
+    },
+    {
+      "path": "output/ehss_sampling_convergence_20260913/analysis.json",
+      "json_exact": true
+    },
+    {
+      "path": "output/imos113_stage_g_20260914/stage_g_summary.json",
+      "json_exact": true
+    }
+  ],
+  "archive_sha256": "22e9f66d61447cb20e02b28784c2eb0e35de652b1b23dbe2bde2665380784645",
+  "new_numerical_simulations": 0,
+  "vendor_executed": false,
+  "bootstrap": "import sys,runpy; from pathlib import Path; r=Path.cwd().resolve(); sys.path[:0]=[str(r/'scripts'),str(r/'src')]; target=str((r/sys.argv[1]).resolve()); sys.argv=[target]; runpy.run_path(target,run_name='__main__'); modules=[Path(m.__file__).resolve() for n,m in sys.modules.items() if getattr(m,'__file__',None) and (n.startswith('support_exchange_transport') or Path(m.__file__).name in {p.name for p in (r/'scripts').glob('*.py')})]; assert all(p.is_relative_to(r) for p in modules),modules; print('Verified package-local project imports:',len(modules))"
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scimms-ehss"
+version = "0.1.0"
+description = "CPU PA and exact hard sphere scattering with archived benchmark evidence"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "numba>=0.61,<0.68"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+replay = ["matplotlib>=3.8,<4", "shapely>=2,<3"]
+
+[project.scripts]
+ccs-xyz = "support_exchange_transport.ccs_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+support_exchange_transport = ["*.cpp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

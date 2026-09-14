@@ -1,0 +1,22 @@
+{
+  "method": [
+    "figure_1_method.png",
+    "Figure 1. Static EHSS calculation. Four-dimensional incidence supplies direction and impact position; native BVH traversal locates the nearest analytical sphere entry, followed by specular reflection until escape or a flagged cap. The synthetic path is an illustration verified against the separate collision routine, not a performance sample. The sampled residual bound and warm components are distinct from ensemble error and complete-process time."
+  ],
+  "native": [
+    "figure_2_native_sampling.png",
+    "Figure 2. Native sampling control. Relative RMSE across four ray budgets for IID and scrambled Sobol incidence on six development structures. Each point uses eight independent estimates; bars are pointwise 95% run/reference bootstrap intervals. Large-case cap-4,096 replays replace cap-64 results without adding replicates. These curves isolate incidence within a common scattering implementation and do not establish a universal asymptotic convergence order."
+  ],
+  "accuracy": [
+    "figure_3_final_accuracy.png",
+    "Figure 3. Independent 2% evaluation on all 18 additional structures. Each method/structure has twenty new estimates. Points show RMSE and bars its pointwise run/reference bootstrap interval; the dashed line is the target. Filled markers pass and open markers are uncertain. The panel is sorted by retained atom count. Our method passes 17/18 and IMoS 16/18, with fifteen jointly passing cases; no definite failures occur under the interval rule."
+  ],
+  "timing": [
+    "figure_4_process_times.png",
+    "Figure 4. Same-computer complete-process timing over five paired blocks. (a) IMoS/own ratios of median single-input times with paired-bootstrap intervals. Filled circles denote jointly passing 2% cases; open diamonds are workload timings with an uncertain accuracy outcome. (b) Actual all-18 batch medians include uncertain cases and are not an all-18 target-qualified speedup. Inputs exist before launch; runtime, process input/output and fresh geometry are included, with code cache present."
+  ],
+  "toc": [
+    "toc_graphic.png",
+    ""
+  ]
+}

@@ -1,0 +1,1694 @@
+{
+  "frozen_utc": "2026-09-13T04:11:11.024749+00:00",
+  "status": "frozen_geometry_panel_no_new_EHSS_results",
+  "structures": [
+    {
+      "id": "1AL1",
+      "title": "CRYSTAL STRUCTURE OF ALPHA1: IMPLICATIONS FOR PROTEIN DESIGN",
+      "atoms": 92,
+      "size_bin": "small",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        6.1123991165601534,
+        7.047922114567994,
+        29.752570887373764
+      ],
+      "axis_ratios": [
+        2.054620898656498,
+        1.0738032050989361
+      ],
+      "convex_hull_center_volume": 1172.0141859659998,
+      "center_hull_to_axis_box": 0.31319594906898,
+      "elements": {
+        "N": 13,
+        "C": 60,
+        "O": 19
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 8
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1AL1.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1AL1"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1AL1",
+      "hashes": {
+        "pdb": "5612328cd9b72726ba68c79dcc5f4cd74283c12abfb02ef3c130317df355a0a9",
+        "json": "635ac8161288d21e3abe26a4e91c3da2290814ccd85e6fdebf2dcdf4cb7717f5"
+      },
+      "npz_sha256": "ac0c6d2cdfe142eea9c869e0f6649fddf29c7fa931de76fdfb3995c8a475e8d0",
+      "xyz_sha256": "90681881ef07d8553bddc19d09aa8a80b2cc97dfa0b1ef5fc20a967a60257a6a",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Science",
+        "journal_id_ASTM": "SCIEAS",
+        "journal_id_CSD": "0038",
+        "journal_id_ISSN": "0036-8075",
+        "journal_volume": "249",
+        "page_first": "543",
+        "page_last": "546",
+        "pdbx_database_id_PubMed": 2382133,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Hill, C.P.",
+          "Anderson, D.H.",
+          "Wesson, L.",
+          "DeGrado, W.F.",
+          "Eisenberg, D."
+        ],
+        "rcsb_journal_abbrev": "Science",
+        "title": "Crystal structure of alpha 1: implications for protein design.",
+        "year": 1990
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "designed_alpha1_peptide",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1A11",
+      "title": "NMR STRUCTURE OF MEMBRANE SPANNING SEGMENT 2 OF THE ACETYLCHOLINE RECEPTOR IN DPC MICELLES, 10 STRUCTURES",
+      "atoms": 186,
+      "size_bin": "small",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        5.457282877938759,
+        7.772626473872007,
+        121.51109405205094
+      ],
+      "axis_ratios": [
+        3.9538853028438767,
+        1.193426468763269
+      ],
+      "convex_hull_center_volume": 2943.746715974,
+      "center_hull_to_axis_box": 0.1790000424350546,
+      "elements": {
+        "N": 31,
+        "C": 118,
+        "O": 36,
+        "S": 1
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "1",
+      "excluded": {
+        "hydrogen_or_deuterium": 204
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1A11.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1A11"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1A11",
+      "hashes": {
+        "pdb": "f7f101fba570ef68b34164949133ad6c2a7637fdafb17f2c1f65a2ba645dbebc",
+        "json": "9c6d012f7f997d64f80c47377580907eeaa6edb53041f615be4f560469b17ee3"
+      },
+      "npz_sha256": "f1c721643b546a4b96cfc6cb0113f28d6d61ed01dc468d1daa989a82c1544de9",
+      "xyz_sha256": "dcfd6f02f395f34462a9a968478b7f1e99f13b1e4fd92c5aaaf593f642e5f731",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "SOLUTION NMR"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Nat.Struct.Biol.",
+        "journal_id_ASTM": "NSBIEW",
+        "journal_id_CSD": "2024",
+        "journal_id_ISSN": "1072-8368",
+        "journal_volume": "6",
+        "page_first": "374",
+        "page_last": "379",
+        "pdbx_database_id_DOI": "10.1038/7610",
+        "pdbx_database_id_PubMed": 10201407,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Opella, S.J.",
+          "Marassi, F.M.",
+          "Gesell, J.J.",
+          "Valente, A.P.",
+          "Kim, Y.",
+          "Oblatt-Montal, M.",
+          "Montal, M."
+        ],
+        "rcsb_journal_abbrev": "Nat Struct Biol",
+        "title": "Structures of the M2 channel-lining segments from nicotinic acetylcholine and NMDA receptors by NMR spectroscopy.",
+        "year": 1999
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "nicotinic_AChR_M2_peptide",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1VII",
+      "title": "THERMOSTABLE SUBDOMAIN FROM CHICKEN VILLIN HEADPIECE, NMR, MINIMIZED AVERAGE STRUCTURE",
+      "atoms": 295,
+      "size_bin": "small",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        11.47208680799603,
+        25.249331192089272,
+        51.43588219549068
+      ],
+      "axis_ratios": [
+        1.4272766373294072,
+        1.4835552581828353
+      ],
+      "convex_hull_center_volume": 5122.2784020325025,
+      "center_hull_to_axis_box": 0.4610705317348887,
+      "elements": {
+        "N": 49,
+        "C": 192,
+        "O": 52,
+        "S": 2
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "hydrogen_or_deuterium": 301
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1VII.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1VII"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1VII",
+      "hashes": {
+        "pdb": "ebecd3d6c0dd9c8b34bcbea9b57c73e4f73986cc674150f0aaa0687db66e77ef",
+        "json": "02c72ff4ff248845496456193f3648e6169d4708008219fd81a387cac780497e"
+      },
+      "npz_sha256": "5c8cbab54d076089e4d36552c86171aceae59e5ec429321a8cfd8f4bc91aea1b",
+      "xyz_sha256": "61639668ed01d5588413119ebbea02e18cb30963150e8fb710de55e22a533c9a",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "SOLUTION NMR"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Nat.Struct.Biol.",
+        "journal_id_ASTM": "NSBIEW",
+        "journal_id_CSD": "2024",
+        "journal_id_ISSN": "1072-8368",
+        "journal_volume": "4",
+        "page_first": "180",
+        "page_last": "184",
+        "pdbx_database_id_DOI": "10.1038/nsb0397-180",
+        "pdbx_database_id_PubMed": 9164455,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "McKnight, C.J.",
+          "Matsudaira, P.T.",
+          "Kim, P.S."
+        ],
+        "rcsb_journal_abbrev": "Nat Struct Biol",
+        "title": "NMR structure of the 35-residue villin headpiece subdomain.",
+        "year": 1997
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "villin_headpiece",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1E0L",
+      "title": "FBP28WW DOMAIN FROM MUS MUSCULUS",
+      "atoms": 309,
+      "size_bin": "small",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        11.911148151862774,
+        26.475641272279017,
+        57.94829807414582
+      ],
+      "axis_ratios": [
+        1.4794391211385656,
+        1.4908928459589588
+      ],
+      "convex_hull_center_volume": 5308.418605290668,
+      "center_hull_to_axis_box": 0.40356877497320576,
+      "elements": {
+        "N": 49,
+        "C": 195,
+        "O": 65
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "1",
+      "excluded": {
+        "hydrogen_or_deuterium": 288
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1E0L.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1E0L"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1E0L",
+      "hashes": {
+        "pdb": "bdebcf8d1e81159c2dc0818aa011ba23d3c2340fa03eb50c7750c250c0ccf5ac",
+        "json": "939c892213439b48ba8ffbb123a816aac0405386963e40b57bc6729defc93ed8"
+      },
+      "npz_sha256": "85ef5f8d74a5ba44f88a54038f63ec716b8c4b6baafd4b71d384a3c786301759",
+      "xyz_sha256": "0c2e843045d48c16bd5414fa582f9a1f455cbabde5d357221f1801d8788cf534",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52
+      },
+      "methods": [
+        {
+          "method": "SOLUTION NMR"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Nat.Struct.Biol.",
+        "journal_id_ASTM": "NSBIEW",
+        "journal_id_CSD": "2024",
+        "journal_id_ISSN": "1072-8368",
+        "journal_volume": "7",
+        "page_first": "375",
+        "pdbx_database_id_DOI": "10.1038/75144",
+        "pdbx_database_id_PubMed": 10802733,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Macias, M.J.",
+          "Gervais, V.",
+          "Civera, C.",
+          "Oschkinat, H."
+        ],
+        "rcsb_journal_abbrev": "Nat Struct Biol",
+        "title": "Structural Analysis of Ww Domains and Design of a Ww Prototype",
+        "year": 2000
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "FBP28_WW_domain",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1ENH",
+      "title": "STRUCTURAL STUDIES OF THE ENGRAILED HOMEODOMAIN",
+      "atoms": 466,
+      "size_bin": "small",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        31.252421179686383,
+        36.63627500919975,
+        39.76933650615798
+      ],
+      "axis_ratios": [
+        1.0418819580385434,
+        1.0827141707091226
+      ],
+      "convex_hull_center_volume": 8524.264319421667,
+      "center_hull_to_axis_box": 0.39774487453070306,
+      "elements": {
+        "N": 95,
+        "C": 289,
+        "O": 82
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 33
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1ENH.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1ENH"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1ENH",
+      "hashes": {
+        "pdb": "9d4774cb36cefbc2b44cec83a72622d31e5e5a1a8ca0bd8cc1c6be98a5deeb0a",
+        "json": "6dab473e5c19a020a86dd13f5f28d104b0f1cd30261e005680c3c862daf8b342"
+      },
+      "npz_sha256": "b887883f8868eeccc8e46e2a1dad8fe4f6470b9fbb38b66bd1f37c51fda6cd0b",
+      "xyz_sha256": "019895ff0701181ba6fb7d69bffc77a96b158d4526318c4b692b290f6fdc8eac",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Protein Sci.",
+        "journal_id_ASTM": "PRCIEI",
+        "journal_id_CSD": "0795",
+        "journal_id_ISSN": "0961-8368",
+        "journal_volume": "3",
+        "page_first": "1779",
+        "page_last": "1787",
+        "pdbx_database_id_PubMed": 7849596,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Clarke, N.D.",
+          "Kissinger, C.R.",
+          "Desjarlais, J.",
+          "Gilliland, G.L.",
+          "Pabo, C.O."
+        ],
+        "rcsb_journal_abbrev": "Protein Sci",
+        "title": "Structural studies of the engrailed homeodomain.",
+        "year": 1994
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "engrailed_homeodomain",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1PGB",
+      "title": "TWO CRYSTAL STRUCTURES OF THE B1 IMMUNOGLOBULIN-BINDING DOMAIN OF STREPTOCCOCAL PROTEIN G AND COMPARISON WITH NMR",
+      "atoms": 436,
+      "size_bin": "small",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        19.058690416279347,
+        27.254341242399203,
+        64.59732917787771
+      ],
+      "axis_ratios": [
+        1.5395345383811183,
+        1.19583515569636
+      ],
+      "convex_hull_center_volume": 7177.558896907332,
+      "center_hull_to_axis_box": 0.362150440738613,
+      "elements": {
+        "N": 67,
+        "C": 273,
+        "O": 95,
+        "S": 1
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 24
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1PGB.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1PGB"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1PGB",
+      "hashes": {
+        "pdb": "1f7a38180b264722853820aa636f9ff66b458f914061f5a12c1687fd951c2f6d",
+        "json": "27f18cd0312cb583628a9a155e4c4bc70165843d00ea95588011e0ad09ba2bff"
+      },
+      "npz_sha256": "7a038bf65c1078803b07afdfb53c993fecc9aa4f7f33942a3bc4e92a997969aa",
+      "xyz_sha256": "24fd580d7f72310bd66434c0b55ac47bdd429e262b9987a0db4883a785ba2445",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Biochemistry",
+        "journal_id_ASTM": "BICHAW",
+        "journal_id_CSD": "0033",
+        "journal_id_ISSN": "0006-2960",
+        "journal_volume": "33",
+        "page_first": "4721",
+        "page_last": "4729",
+        "pdbx_database_id_DOI": "10.1021/bi00181a032",
+        "pdbx_database_id_PubMed": 8161530,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Gallagher, T.",
+          "Alexander, P.",
+          "Bryan, P.",
+          "Gilliland, G.L."
+        ],
+        "rcsb_journal_abbrev": "Biochemistry",
+        "title": "Two crystal structures of the B1 immunoglobulin-binding domain of streptococcal protein G and comparison with NMR.",
+        "year": 1994
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "streptococcal_protein_G_B1",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1MBN",
+      "title": "THE STEREOCHEMISTRY OF THE PROTEIN MYOGLOBIN",
+      "atoms": 1216,
+      "size_bin": "medium",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        34.55375051344442,
+        89.368326418522,
+        108.75676318365203
+      ],
+      "axis_ratios": [
+        1.1031544577840573,
+        1.608215397773359
+      ],
+      "convex_hull_center_volume": 25185.331166666652,
+      "center_hull_to_axis_box": 0.3897809306240798,
+      "elements": {
+        "N": 216,
+        "C": 783,
+        "O": 215,
+        "S": 2
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 44
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1MBN.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1MBN"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1MBN",
+      "hashes": {
+        "pdb": "e4635115be5a605e58f449f82824e15182a7000c3677876c33fc44118defef78",
+        "json": "19d34fbb06628f3f873615b0318dc98d0f4fc0ecbb57cc99598a585b2e89f2cd"
+      },
+      "npz_sha256": "4d6cc6ecc52aa7e5a8e105a79d5419ff2536f4573cfc583977f29b17cefa9be2",
+      "xyz_sha256": "ef152100f672a43d3f0edbdd83eeb988a52cebf33437d57c4581f6e3a3c9ad4a",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Prog.Stereochem.",
+        "journal_id_ASTM": "PRSTAP",
+        "journal_id_CSD": "0419",
+        "journal_id_ISSN": "0079-6808",
+        "journal_volume": "4",
+        "page_first": "299",
+        "pdbx_database_id_PubMed": -1,
+        "rcsb_authors": [
+          "Watson, H.C."
+        ],
+        "rcsb_journal_abbrev": "Prog Stereochem",
+        "title": "The Stereochemistry of the Protein Myoglobin",
+        "year": 1969
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "myoglobin",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1HRC",
+      "title": "HIGH-RESOLUTION THREE-DIMENSIONAL STRUCTURE OF HORSE HEART CYTOCHROME C",
+      "atoms": 823,
+      "size_bin": "medium",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        35.23345753585263,
+        54.510578250123245,
+        74.14127078239783
+      ],
+      "axis_ratios": [
+        1.1662445258434517,
+        1.2438349702071116
+      ],
+      "convex_hull_center_volume": 16516.40418820099,
+      "center_hull_to_axis_box": 0.45440176734958637,
+      "elements": {
+        "N": 144,
+        "C": 524,
+        "O": 151,
+        "S": 4
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 170
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1HRC.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1HRC"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1HRC",
+      "hashes": {
+        "pdb": "7d2156aa30fa67f181f5bd283ed49c1a69941fa231c04a23e7f1c9bb7078fc0c",
+        "json": "a7aa8b40b765bdd283908ed3bab65c9ee9699bd1c1d3d149e1c2abe1500cbc4f"
+      },
+      "npz_sha256": "a941c3e5da97315b2efff8c4ef53444fdaf1aaf31f64620d267281a1441ccff2",
+      "xyz_sha256": "eee4f7318f2dcc03127e01ebb36b2edbb56657ef9b399ccb735954ceb862c534",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "J.Mol.Biol.",
+        "journal_id_ASTM": "JMOBAK",
+        "journal_id_CSD": "0070",
+        "journal_id_ISSN": "0022-2836",
+        "journal_volume": "214",
+        "page_first": "585",
+        "page_last": "595",
+        "pdbx_database_id_DOI": "10.1016/0022-2836(90)90200-6",
+        "pdbx_database_id_PubMed": 2166170,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Bushnell, G.W.",
+          "Louie, G.V.",
+          "Brayer, G.D."
+        ],
+        "rcsb_journal_abbrev": "J Mol Biol",
+        "title": "High-resolution three-dimensional structure of horse heart cytochrome c.",
+        "year": 1990
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "cytochrome_c",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1TIM",
+      "title": "STRUCTURE OF TRIOSE PHOSPHATE ISOMERASE FROM CHICKEN MUSCLE",
+      "atoms": 3740,
+      "size_bin": "medium",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        81.621023788409,
+        116.07426673262735,
+        403.31728727554844
+      ],
+      "axis_ratios": [
+        1.8640409304318253,
+        1.192523525805292
+      ],
+      "convex_hull_center_volume": 96665.87926559882,
+      "center_hull_to_axis_box": 0.4875544801665962,
+      "elements": {
+        "N": 658,
+        "C": 2374,
+        "O": 696,
+        "S": 12
+      },
+      "chains": [
+        "A",
+        "B"
+      ],
+      "model": "implicit first",
+      "excluded": {},
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1TIM.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1TIM"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1TIM",
+      "hashes": {
+        "pdb": "79b35b419696a1e368aad2121ae2712e46444b5978de1e86bdc286f482222cdc",
+        "json": "6f9bf2b1831cfba93791ceeee857727227c04d44d0a4d71417975564ff091d16"
+      },
+      "npz_sha256": "ed5bb80de17c880a926fc31e02b78eb16613903a2cac6083a2afff2efbf400a5",
+      "xyz_sha256": "d9e1ec81bb8a389686c05beea5b37535ddd9c88b94e109856ff9ad5f0afa97dd",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Biochem.Biophys.Res.Commun.",
+        "journal_id_ASTM": "BBRCA9",
+        "journal_id_CSD": "0146",
+        "journal_id_ISSN": "0006-291X",
+        "journal_volume": "72",
+        "page_first": "146",
+        "page_last": "155",
+        "pdbx_database_id_PubMed": 985462,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Banner, D.W.",
+          "Bloomer, A.",
+          "Petsko, G.A.",
+          "Phillips, D.C.",
+          "Wilson, I.A."
+        ],
+        "rcsb_journal_abbrev": "Biochem Biophys Res Commun",
+        "title": "Atomic coordinates for triose phosphate isomerase from chicken muscle.",
+        "year": 1976
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "triosephosphate_isomerase",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "2PTC",
+      "title": "THE GEOMETRY OF THE REACTIVE SITE AND OF THE PEPTIDE GROUPS IN TRYPSIN, TRYPSINOGEN AND ITS COMPLEXES WITH INHIBITORS",
+      "atoms": 2016,
+      "size_bin": "medium",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        71.05697894622357,
+        99.4127872641852,
+        155.98554581695905
+      ],
+      "axis_ratios": [
+        1.2526249368972335,
+        1.1828175388905142
+      ],
+      "convex_hull_center_volume": 45816.99908638218,
+      "center_hull_to_axis_box": 0.42910712452083183,
+      "elements": {
+        "N": 342,
+        "C": 1268,
+        "O": 385,
+        "S": 21
+      },
+      "chains": [
+        "E",
+        "I"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "zero_occupancy": 67,
+        "heteroatom_or_water": 158
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/2PTC.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/2PTC"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/2PTC",
+      "hashes": {
+        "pdb": "0b3880b05cfba506159267e7e2f3c851b89ea736e9ce822e0c0102d720e26ee9",
+        "json": "96d26c8bcc4a46c85b1be9bf2865c2d8d44394be7855850fdf26b8f8ffd3ae22"
+      },
+      "npz_sha256": "6f4309cabeb0ec4c14721df2a5df7187475dd41b7431b0af3d3e6f29a8fa4f8e",
+      "xyz_sha256": "8dff82f35b71452d3795be0ff5c7471405327a57ab3771f5359931a2f9d5ee44",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "DK",
+        "id": "primary",
+        "journal_abbrev": "Acta Crystallogr.,Sect.B",
+        "journal_id_ASTM": "ASBSDK",
+        "journal_id_CSD": "0622",
+        "journal_id_ISSN": "0108-7681",
+        "journal_volume": "39",
+        "page_first": "480",
+        "pdbx_database_id_PubMed": -1,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Marquart, M.",
+          "Walter, J.",
+          "Deisenhofer, J.",
+          "Bode, W.",
+          "Huber, R."
+        ],
+        "rcsb_journal_abbrev": "Acta Crystallogr B",
+        "title": "The Geometry of the Reactive Site and of the Peptide Groups in Trypsin, Trypsinogen and its Complexes with Inhibitors",
+        "year": 1983
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "trypsin_inhibitor_complex",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1CLL",
+      "title": "CALMODULIN STRUCTURE REFINED AT 1.7 ANGSTROMS RESOLUTION",
+      "atoms": 1130,
+      "size_bin": "medium",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        33.34650002079259,
+        62.369631094499766,
+        385.21128650584797
+      ],
+      "axis_ratios": [
+        2.4852089787067992,
+        1.3676074522178074
+      ],
+      "convex_hull_center_volume": 36317.86182854732,
+      "center_hull_to_axis_box": 0.3153631591127506,
+      "elements": {
+        "N": 182,
+        "C": 692,
+        "O": 247,
+        "S": 9
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "alternate_not_blank_or_A": 3,
+        "heteroatom_or_water": 146
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1CLL.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1CLL"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1CLL",
+      "hashes": {
+        "pdb": "54c094c7c337d7b5829bb9d865cd0042f9e5557478d1528f76c1e7b691f8ce37",
+        "json": "9bee45cb48c48fb7baf9a61fed35697c20e9770780e8da3270eefc7631853f5f"
+      },
+      "npz_sha256": "8db6a517c64c45d006cd9bc4aff4dd8b4f4b2ddea6598e65fa4e8dfbdd110d50",
+      "xyz_sha256": "1486c3e15706274770f38d8643e773adce98dd4c0acdb12cb814e9a66bea8e26",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "J.Mol.Biol.",
+        "journal_id_ASTM": "JMOBAK",
+        "journal_id_CSD": "0070",
+        "journal_id_ISSN": "0022-2836",
+        "journal_volume": "228",
+        "page_first": "1177",
+        "page_last": "1192",
+        "pdbx_database_id_DOI": "10.1016/0022-2836(92)90324-D",
+        "pdbx_database_id_PubMed": 1474585,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Chattopadhyaya, R.",
+          "Meador, W.E.",
+          "Means, A.R.",
+          "Quiocho, F.A."
+        ],
+        "rcsb_journal_abbrev": "J Mol Biol",
+        "title": "Calmodulin structure refined at 1.7 A resolution.",
+        "year": 1992
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "calmodulin",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1GFL",
+      "title": "STRUCTURE OF GREEN FLUORESCENT PROTEIN",
+      "atoms": 3650,
+      "size_bin": "medium",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        84.32792894829437,
+        138.296410585883,
+        288.8160240571283
+      ],
+      "axis_ratios": [
+        1.445124248468036,
+        1.2806183984573036
+      ],
+      "convex_hull_center_volume": 92326.54546084582,
+      "center_hull_to_axis_box": 0.4482516552156001,
+      "elements": {
+        "N": 618,
+        "C": 2322,
+        "O": 698,
+        "S": 12
+      },
+      "chains": [
+        "A",
+        "B"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 300
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1GFL.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1GFL"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1GFL",
+      "hashes": {
+        "pdb": "60eb370ad1a2c7c63382399d8655e0448fc29acc2a436e1a6112a5d599390d6f",
+        "json": "0bc0d17e6dd9b4369458ae212dfa281a24d35531d7a45931e47acfb7965528c8"
+      },
+      "npz_sha256": "84fe756739d9f5438e8d587988d53f9169aaa8c69a9ed2b07e8475234c91f773",
+      "xyz_sha256": "6a7c39f9425ce228a78a797bb0c601da6dfd166a72c28918ed8e08ec7072c911",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Nat.Biotechnol.",
+        "journal_id_ASTM": "NABIF9",
+        "journal_id_CSD": "2119",
+        "journal_id_ISSN": "1087-0156",
+        "journal_volume": "14",
+        "page_first": "1246",
+        "page_last": "1251",
+        "pdbx_database_id_DOI": "10.1038/nbt1096-1246",
+        "pdbx_database_id_PubMed": 9631087,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Yang, F.",
+          "Moss, L.G.",
+          "Phillips Jr., G.N."
+        ],
+        "rcsb_journal_abbrev": "Nat Biotechnol",
+        "title": "The molecular structure of green fluorescent protein.",
+        "year": 1996
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "green_fluorescent_protein",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1BMF",
+      "title": "BOVINE MITOCHONDRIAL F1-ATPASE",
+      "atoms": 22663,
+      "size_bin": "large",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        469.2600578336326,
+        583.4932082226618,
+        630.2463964446445
+      ],
+      "axis_ratios": [
+        1.0392912788698203,
+        1.115093046745035
+      ],
+      "convex_hull_center_volume": 739496.7881452095,
+      "center_hull_to_axis_box": 0.45176052081246826,
+      "elements": {
+        "N": 3936,
+        "C": 14314,
+        "O": 4337,
+        "S": 76
+      },
+      "chains": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "zero_occupancy": 59,
+        "heteroatom_or_water": 759
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1BMF.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1BMF"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1BMF",
+      "hashes": {
+        "pdb": "d9ceafba2e77c808a71539c74f22d81f1427ed4f9f93cf9fc206e4c3f34068f7",
+        "json": "81bfc79f64117adf89e9910e2df357e27a04de264609a6e3e943ed047e422c66"
+      },
+      "npz_sha256": "90d4af1d61d9471f6fa59f7497c41f8c8ba8ab08ecc1537eaaa1c25233380080",
+      "xyz_sha256": "067d6b77aae7fc31907ec1694931096a240536c54f18cef70a5e93d2f67f930e",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "crystals_number": 17,
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "Nature",
+        "journal_id_ASTM": "NATUAS",
+        "journal_id_CSD": "0006",
+        "journal_id_ISSN": "0028-0836",
+        "journal_volume": "370",
+        "page_first": "621",
+        "page_last": "628",
+        "pdbx_database_id_DOI": "10.1038/370621a0",
+        "pdbx_database_id_PubMed": 8065448,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Abrahams, J.P.",
+          "Leslie, A.G.",
+          "Lutter, R.",
+          "Walker, J.E."
+        ],
+        "rcsb_journal_abbrev": "Nature",
+        "title": "Structure at 2.8 A resolution of F1-ATPase from bovine heart mitochondria.",
+        "year": 1994
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "mitochondrial_F1_ATPase",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1F88",
+      "title": "CRYSTAL STRUCTURE OF BOVINE RHODOPSIN",
+      "atoms": 5067,
+      "size_bin": "large",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        97.59715726661778,
+        263.6575969809294,
+        375.41712543179307
+      ],
+      "axis_ratios": [
+        1.1932649803074689,
+        1.6436205430927926
+      ],
+      "convex_hull_center_volume": 156607.67023166004,
+      "center_hull_to_axis_box": 0.413788891018587,
+      "elements": {
+        "N": 780,
+        "C": 3379,
+        "O": 857,
+        "S": 51
+      },
+      "chains": [
+        "A",
+        "B"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 200
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1F88.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1F88"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1F88",
+      "hashes": {
+        "pdb": "2b05f8ec324822aa1db35ce0ded5cd0fb46f3464a1fe752f00f9e99587f9f2b8",
+        "json": "9893bf1645227eef58257236b4ede6bce74a7e884821b7ffa23a73cff3d6c78e"
+      },
+      "npz_sha256": "d677c69ca709b39f48fe2fdb74be3b0002df91c90cb48ff1710e0e1662719096",
+      "xyz_sha256": "748317b058ed50e25f15ce4775515518817125a2762c9c9453966c99879132ff",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "crystals_number": 1,
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "Science",
+        "journal_id_ASTM": "SCIEAS",
+        "journal_id_CSD": "0038",
+        "journal_id_ISSN": "0036-8075",
+        "journal_volume": "289",
+        "page_first": "739",
+        "page_last": "745",
+        "pdbx_database_id_DOI": "10.1126/science.289.5480.739",
+        "pdbx_database_id_PubMed": 10926528,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Palczewski, K.",
+          "Kumasaka, T.",
+          "Hori, T.",
+          "Behnke, C.A.",
+          "Motoshima, H.",
+          "Fox, B.A.",
+          "Le Trong, I.",
+          "Teller, D.C.",
+          "Okada, T.",
+          "Stenkamp, R.E.",
+          "Yamamoto, M.",
+          "Miyano, M."
+        ],
+        "rcsb_journal_abbrev": "Science",
+        "title": "Crystal structure of rhodopsin: A G protein-coupled receptor.",
+        "year": 2000
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "rhodopsin",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1RYP",
+      "title": "CRYSTAL STRUCTURE OF THE 20S PROTEASOME FROM YEAST AT 2.4 ANGSTROMS RESOLUTION",
+      "atoms": 49676,
+      "size_bin": "large",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        774.8327469327493,
+        795.6085849194815,
+        2009.6894396816353
+      ],
+      "axis_ratios": [
+        1.5893324289122912,
+        1.013317975504017
+      ],
+      "convex_hull_center_volume": 1779925.2148223813,
+      "center_hull_to_axis_box": 0.6290032295988546,
+      "elements": {
+        "N": 8446,
+        "C": 31406,
+        "O": 9664,
+        "S": 160
+      },
+      "chains": [
+        "1",
+        "2",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 2928
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1RYP.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1RYP"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1RYP",
+      "hashes": {
+        "pdb": "b0eae68669e8da5b69fb2d7b37784448ee0b06cd378143992861aa06127bc9e5",
+        "json": "408d1d717a567c33a9fd1773040fd97216a203b307da1314be21b904f88dc40a"
+      },
+      "npz_sha256": "08881018ba26164cefce14448e8b490c4c4ac4339e1a21330aa62e8e7651abb5",
+      "xyz_sha256": "3f912b1d2536da99265932c6ac0c75693486637c2d4091495d35b7102a34b8cb",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "crystals_number": 1,
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "Nature",
+        "journal_id_ASTM": "NATUAS",
+        "journal_id_CSD": "0006",
+        "journal_id_ISSN": "0028-0836",
+        "journal_volume": "386",
+        "page_first": "463",
+        "page_last": "471",
+        "pdbx_database_id_DOI": "10.1038/386463a0",
+        "pdbx_database_id_PubMed": 9087403,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Groll, M.",
+          "Ditzel, L.",
+          "Lowe, J.",
+          "Stock, D.",
+          "Bochtler, M.",
+          "Bartunik, H.D.",
+          "Huber, R."
+        ],
+        "rcsb_journal_abbrev": "Nature",
+        "title": "Structure of 20S proteasome from yeast at 2.4 A resolution.",
+        "year": 1997
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "20S_proteasome",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1SU4",
+      "title": "CRYSTAL STRUCTURE OF CALCIUM ATPASE WITH TWO BOUND CALCIUM IONS",
+      "atoms": 7671,
+      "size_bin": "large",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        126.98063053007644,
+        318.1515712795078,
+        1067.8172877844024
+      ],
+      "axis_ratios": [
+        1.8320251764875335,
+        1.582881111155439
+      ],
+      "convex_hull_center_volume": 319860.6989245292,
+      "center_hull_to_axis_box": 0.32157531165405934,
+      "elements": {
+        "N": 1287,
+        "C": 4876,
+        "O": 1451,
+        "S": 57
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 120
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1SU4.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1SU4"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1SU4",
+      "hashes": {
+        "pdb": "495a8d50efc12738f33c84548c5ecaa79affe03bb64463acda8a2798a13c39f4",
+        "json": "41d59ffe25b25fc495c04512d7f4b3370e1699182f1eac82a2427193227eee05"
+      },
+      "npz_sha256": "66a4cf4358d5988e0a1c76540b2db2e73d46e189515d6750640a385eb3adcc52",
+      "xyz_sha256": "bd0a1d0f1a704f21b94de1e49ed839a395d5d264533d3c12164251d7a267564e",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "crystals_number": 3,
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "Nature",
+        "journal_id_ASTM": "NATUAS",
+        "journal_id_CSD": "0006",
+        "journal_id_ISSN": "0028-0836",
+        "journal_volume": "405",
+        "page_first": "647",
+        "page_last": "655",
+        "pdbx_database_id_DOI": "10.1038/35015017",
+        "pdbx_database_id_PubMed": 10864315,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Toyoshima, C.",
+          "Nakasako, M.",
+          "Nomura, H.",
+          "Ogawa, H."
+        ],
+        "rcsb_journal_abbrev": "Nature",
+        "title": "Crystal structure of the calcium pump of sarcoplasmic reticulum at 2.6 A resolution",
+        "year": 2000
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "calcium_ATPase",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1AO6",
+      "title": "CRYSTAL STRUCTURE OF HUMAN SERUM ALBUMIN",
+      "atoms": 9198,
+      "size_bin": "large",
+      "axis_shape": "compact_axes",
+      "gyration_eigenvalues": [
+        244.05823669752536,
+        290.126248143016,
+        722.0924234631113
+      ],
+      "axis_ratios": [
+        1.5776217431315722,
+        1.0903019186065885
+      ],
+      "convex_hull_center_volume": 366913.7925147214,
+      "center_hull_to_axis_box": 0.5015747056681226,
+      "elements": {
+        "N": 1552,
+        "C": 5806,
+        "O": 1758,
+        "S": 82
+      },
+      "chains": [
+        "A",
+        "B"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 7
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1AO6.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1AO6"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1AO6",
+      "hashes": {
+        "pdb": "cbbd4651ac15938855d269d6def85da14568b7874521c9e3eca9dfc9d62b9140",
+        "json": "c0fb959331dd563f4e01c44a5a2897a08dda698ce38a72193aba07dfa7a823b4"
+      },
+      "npz_sha256": "b84a5f2a907868be56de87a4974f91db7b991cb16140600022070d59abf38ffe",
+      "xyz_sha256": "518778c573f6e420113879f6d2d89e778c2f0b20742e61d4243673bc4b82cf13",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "crystals_number": 2,
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "UK",
+        "id": "primary",
+        "journal_abbrev": "Protein Eng.",
+        "journal_id_ASTM": "PRENE9",
+        "journal_id_CSD": "0859",
+        "journal_id_ISSN": "0269-2139",
+        "journal_volume": "12",
+        "page_first": "439",
+        "page_last": "446",
+        "pdbx_database_id_DOI": "10.1093/protein/12.6.439",
+        "pdbx_database_id_PubMed": 10388840,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Sugio, S.",
+          "Kashima, A.",
+          "Mochizuki, S.",
+          "Noda, M.",
+          "Kobayashi, K."
+        ],
+        "rcsb_journal_abbrev": "Protein Eng",
+        "title": "Crystal structure of human serum albumin at 2.5 A resolution.",
+        "year": 1999
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "serum_albumin",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    },
+    {
+      "id": "1W0O",
+      "title": "VIBRIO CHOLERAE SIALIDASE",
+      "atoms": 5827,
+      "size_bin": "large",
+      "axis_shape": "elongated",
+      "gyration_eigenvalues": [
+        97.8347998633227,
+        109.65755205459386,
+        821.3983716335583
+      ],
+      "axis_ratios": [
+        2.736891907461896,
+        1.058699219405917
+      ],
+      "convex_hull_center_volume": 163041.55369894064,
+      "center_hull_to_axis_box": 0.3503402903451681,
+      "elements": {
+        "N": 1006,
+        "C": 3651,
+        "O": 1158,
+        "S": 12
+      },
+      "chains": [
+        "A"
+      ],
+      "model": "implicit first",
+      "excluded": {
+        "heteroatom_or_water": 965
+      },
+      "input_selection": "First deposited model; all ATOM chains; altloc blank/A; occupancy>0; no H/D/HETATM; no assembly expansion.",
+      "interpretation": "Deposited coordinate geometry, not claimed biological assembly or experimental gas-phase conformer.",
+      "source_urls": [
+        "https://files.rcsb.org/download/1W0O.pdb",
+        "https://data.rcsb.org/rest/v1/core/entry/1W0O"
+      ],
+      "entry_url": "https://www.rcsb.org/structure/1W0O",
+      "hashes": {
+        "pdb": "4e67306fff945b368738372351d6fe5c9da244eeb9f0c0e27d1fc06490683e2b",
+        "json": "63949528e0264bf946830e07e8b5be7e24ad3f2cdba89272bc65debfb7b1fa21"
+      },
+      "npz_sha256": "7bee98ff2ba09daa6ea48a7ab2c63cdd16c499551536426335aae7bcc2234192",
+      "xyz_sha256": "fda6198d1e5005f351e1602acb0af37fa02447ef609f4b548298433ee611a207",
+      "probe_radius": 1.4,
+      "bare_radii": {
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "S": 1.8
+      },
+      "methods": [
+        {
+          "method": "X-RAY DIFFRACTION"
+        }
+      ],
+      "primary_citation": {
+        "country": "US",
+        "id": "primary",
+        "journal_abbrev": "J.Biol.Chem.",
+        "journal_id_ASTM": "JBCHA3",
+        "journal_id_CSD": "0071",
+        "journal_id_ISSN": "0021-9258",
+        "journal_volume": "279",
+        "page_first": "40819",
+        "pdbx_database_id_DOI": "10.1074/JBC.M404965200",
+        "pdbx_database_id_PubMed": 15226294,
+        "rcsb_ORCID_identifiers": [
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?",
+          "?"
+        ],
+        "rcsb_authors": [
+          "Moustafa, I.",
+          "Connaris, H.",
+          "Taylor, M.",
+          "Zaitsev, V.",
+          "Wilsonm, J.C.",
+          "Kiefel, J.",
+          "Von-Itzstein, M.",
+          "Taylor, G."
+        ],
+        "rcsb_journal_abbrev": "J Biol Chem",
+        "title": "Sialic Acid Recognition by Vibrio Cholerae Neuraminidase",
+        "year": 2004
+      },
+      "selection_stage": "frozen before EHSS performance; budget calibration and independent final seeds will be separated",
+      "role": "new_molecular_evaluation",
+      "family_label": "sialidase",
+      "family_label_basis": "Entry identity/function for clustered reporting; not a computed sequence-homology guarantee."
+    }
+  ],
+  "development_ids": [
+    "1CRN",
+    "1BNA",
+    "1LYZ",
+    "4AKE",
+    "1IGT",
+    "1AON"
+  ],
+  "alternates": [
+    {
+      "id": "1R69",
+      "reason": "Axis-compact small candidate; replaced before EHSS by helical peptide to broaden shape coverage."
+    },
+    {
+      "id": "1FME",
+      "reason": "Axis-compact small designed peptide; replaced before EHSS by helical peptide."
+    }
+  ],
+  "size_counts": {
+    "small": 6,
+    "medium": 6,
+    "large": 6
+  },
+  "axis_shape_counts": {
+    "elongated": 6,
+    "compact_axes": 12
+  },
+  "plan_deviation": "The proposed 3 size x 3 shape x 2 grid is not claimed complete. The actual panel is 6 per size, with continuous axis/packing metrics. Small closed cavities were not forced; shape category coverage is reported as observed.",
+  "novelty_scope": "18 entries not previously evaluated in this project; not a random sample of all proteins or a sequence-disjoint machine-learning dataset.",
+  "physical_defaults": {
+    "probe": "He",
+    "probe_radius": 1.4,
+    "specular": true,
+    "elastic": true
+  },
+  "algorithm_lock": {
+    "leaf_size": 4,
+    "source": "3 independent scrambled Sobol blocks over isotropic enclosing impact disks",
+    "response_reuse": false,
+    "threads": 1,
+    "initial_cap": 512,
+    "cap_policy": "Inspect sampled tail bound for each run; predeclared extension if above target/10. Final holdout independent of calibration."
+  },
+  "input_sources": "RCSB PDB coordinate files and Data API entry metadata; all originals and per-file SHA256 retained."
+}

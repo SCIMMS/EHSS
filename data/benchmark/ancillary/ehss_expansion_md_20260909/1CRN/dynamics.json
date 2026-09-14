@@ -1,0 +1,477 @@
+{
+  "records": [
+    {
+      "production_step": 0,
+      "time_ps": 0.0,
+      "potential_kj_mol": -3313.6107837688633,
+      "kinetic_kj_mol": 1879.7400821146334,
+      "temperature_K": 281.1949832638485
+    },
+    {
+      "production_step": 1,
+      "time_ps": 0.002,
+      "potential_kj_mol": -3329.937309029333,
+      "kinetic_kj_mol": 1904.2744558058785,
+      "temperature_K": 284.86514110382905
+    },
+    {
+      "production_step": 2,
+      "time_ps": 0.004,
+      "potential_kj_mol": -3331.9376444199706,
+      "kinetic_kj_mol": 1924.5359708305816,
+      "temperature_K": 287.8961114132253
+    },
+    {
+      "production_step": 3,
+      "time_ps": 0.006,
+      "potential_kj_mol": -3288.1664113788643,
+      "kinetic_kj_mol": 1910.4625028218888,
+      "temperature_K": 285.79082641195174
+    },
+    {
+      "production_step": 4,
+      "time_ps": 0.008,
+      "potential_kj_mol": -3216.70126535059,
+      "kinetic_kj_mol": 1840.3350610203627,
+      "temperature_K": 275.30028837887807
+    },
+    {
+      "production_step": 5,
+      "time_ps": 0.01,
+      "potential_kj_mol": -3184.2684023437714,
+      "kinetic_kj_mol": 1782.8307914332252,
+      "temperature_K": 266.6980820004491
+    },
+    {
+      "production_step": 6,
+      "time_ps": 0.012,
+      "potential_kj_mol": -3222.9878403707353,
+      "kinetic_kj_mol": 1799.4633688762628,
+      "temperature_K": 269.1861905321714
+    },
+    {
+      "production_step": 7,
+      "time_ps": 0.014,
+      "potential_kj_mol": -3289.3374789237896,
+      "kinetic_kj_mol": 1857.1688586933078,
+      "temperature_K": 277.8184979440993
+    },
+    {
+      "production_step": 8,
+      "time_ps": 0.016,
+      "potential_kj_mol": -3310.2291248649753,
+      "kinetic_kj_mol": 1918.7020568782048,
+      "temperature_K": 287.023401748836
+    },
+    {
+      "production_step": 9,
+      "time_ps": 0.018000000000000002,
+      "potential_kj_mol": -3266.9424017318024,
+      "kinetic_kj_mol": 1909.939786710917,
+      "temperature_K": 285.7126320118456
+    },
+    {
+      "production_step": 10,
+      "time_ps": 0.02,
+      "potential_kj_mol": -3225.3588079909337,
+      "kinetic_kj_mol": 1863.6877811991735,
+      "temperature_K": 278.7936797377827
+    },
+    {
+      "production_step": 11,
+      "time_ps": 0.022,
+      "potential_kj_mol": -3244.9019166612393,
+      "kinetic_kj_mol": 1844.3315595174454,
+      "temperature_K": 275.89813450595375
+    },
+    {
+      "production_step": 12,
+      "time_ps": 0.024,
+      "potential_kj_mol": -3289.1192603876243,
+      "kinetic_kj_mol": 1895.9061946031482,
+      "temperature_K": 283.61331214553917
+    },
+    {
+      "production_step": 13,
+      "time_ps": 0.026000000000000002,
+      "potential_kj_mol": -3279.2873382785456,
+      "kinetic_kj_mol": 1923.2971264368182,
+      "temperature_K": 287.7107896062982
+    },
+    {
+      "production_step": 14,
+      "time_ps": 0.028,
+      "potential_kj_mol": -3221.684284533661,
+      "kinetic_kj_mol": 1884.412933191466,
+      "temperature_K": 281.8940066516278
+    },
+    {
+      "production_step": 15,
+      "time_ps": 0.03,
+      "potential_kj_mol": -3197.4586436192303,
+      "kinetic_kj_mol": 1833.5209463947858,
+      "temperature_K": 274.28094806351834
+    },
+    {
+      "production_step": 16,
+      "time_ps": 0.032,
+      "potential_kj_mol": -3241.933023588879,
+      "kinetic_kj_mol": 1846.1215008626248,
+      "temperature_K": 276.1658962733332
+    },
+    {
+      "production_step": 17,
+      "time_ps": 0.034,
+      "potential_kj_mol": -3301.661792104126,
+      "kinetic_kj_mol": 1911.7078912628263,
+      "temperature_K": 285.977127159134
+    },
+    {
+      "production_step": 18,
+      "time_ps": 0.036000000000000004,
+      "potential_kj_mol": -3312.1701226769947,
+      "kinetic_kj_mol": 1951.803940713148,
+      "temperature_K": 291.9751946906014
+    },
+    {
+      "production_step": 19,
+      "time_ps": 0.038,
+      "potential_kj_mol": -3268.9431079533724,
+      "kinetic_kj_mol": 1933.137864638227,
+      "temperature_K": 289.18289005261954
+    },
+    {
+      "production_step": 20,
+      "time_ps": 0.04,
+      "potential_kj_mol": -3220.7891826772925,
+      "kinetic_kj_mol": 1876.0851297152346,
+      "temperature_K": 280.6482298650366
+    },
+    {
+      "production_step": 21,
+      "time_ps": 0.042,
+      "potential_kj_mol": -3214.101045257802,
+      "kinetic_kj_mol": 1856.5119175789991,
+      "temperature_K": 277.72022449267854
+    },
+    {
+      "production_step": 22,
+      "time_ps": 0.044,
+      "potential_kj_mol": -3246.3945410212746,
+      "kinetic_kj_mol": 1868.0950219893266,
+      "temperature_K": 279.45296982369325
+    },
+    {
+      "production_step": 23,
+      "time_ps": 0.046,
+      "potential_kj_mol": -3287.667067816315,
+      "kinetic_kj_mol": 1918.1301549624336,
+      "temperature_K": 286.9378495221405
+    },
+    {
+      "production_step": 24,
+      "time_ps": 0.048,
+      "potential_kj_mol": -3307.5284832492985,
+      "kinetic_kj_mol": 1954.0755517126702,
+      "temperature_K": 292.31501061678733
+    },
+    {
+      "production_step": 25,
+      "time_ps": 0.05,
+      "potential_kj_mol": -3295.204346177926,
+      "kinetic_kj_mol": 1960.3679398207346,
+      "temperature_K": 293.2563045677821
+    },
+    {
+      "production_step": 26,
+      "time_ps": 0.052000000000000005,
+      "potential_kj_mol": -3258.886377158552,
+      "kinetic_kj_mol": 1940.7807493766227,
+      "temperature_K": 290.32620814566303
+    },
+    {
+      "production_step": 27,
+      "time_ps": 0.054,
+      "potential_kj_mol": -3217.1697003047548,
+      "kinetic_kj_mol": 1900.0494535439975,
+      "temperature_K": 284.23311253156874
+    },
+    {
+      "production_step": 28,
+      "time_ps": 0.056,
+      "potential_kj_mol": -3198.0382801888823,
+      "kinetic_kj_mol": 1862.056677490946,
+      "temperature_K": 278.5496788866541
+    },
+    {
+      "production_step": 29,
+      "time_ps": 0.058,
+      "potential_kj_mol": -3222.4199431340967,
+      "kinetic_kj_mol": 1860.6196298802781,
+      "temperature_K": 278.33470736868946
+    },
+    {
+      "production_step": 30,
+      "time_ps": 0.06,
+      "potential_kj_mol": -3264.2565767441174,
+      "kinetic_kj_mol": 1900.5812002996352,
+      "temperature_K": 284.3126578482191
+    },
+    {
+      "production_step": 31,
+      "time_ps": 0.062,
+      "potential_kj_mol": -3277.48717013844,
+      "kinetic_kj_mol": 1931.5095024997638,
+      "temperature_K": 288.93929931971485
+    },
+    {
+      "production_step": 32,
+      "time_ps": 0.064,
+      "potential_kj_mol": -3256.6720314982376,
+      "kinetic_kj_mol": 1920.0894145779378,
+      "temperature_K": 287.2309400297235
+    },
+    {
+      "production_step": 64,
+      "time_ps": 0.128,
+      "potential_kj_mol": -3226.2988797832904,
+      "kinetic_kj_mol": 1866.5422897829887,
+      "temperature_K": 279.22069276000303
+    },
+    {
+      "production_step": 128,
+      "time_ps": 0.256,
+      "potential_kj_mol": -3232.178709305631,
+      "kinetic_kj_mol": 1870.7225773315074,
+      "temperature_K": 279.8460323473365
+    },
+    {
+      "production_step": 256,
+      "time_ps": 0.512,
+      "potential_kj_mol": -3254.5422067736213,
+      "kinetic_kj_mol": 1909.2035450439353,
+      "temperature_K": 285.60249579397436
+    },
+    {
+      "production_step": 512,
+      "time_ps": 1.024,
+      "potential_kj_mol": -3178.035974431632,
+      "kinetic_kj_mol": 1871.5781355687002,
+      "temperature_K": 279.9740174270174
+    },
+    {
+      "production_step": 768,
+      "time_ps": 1.536,
+      "potential_kj_mol": -3215.6574375527152,
+      "kinetic_kj_mol": 1857.4453535660389,
+      "temperature_K": 277.8598594982045
+    },
+    {
+      "production_step": 1024,
+      "time_ps": 2.048,
+      "potential_kj_mol": -3224.820258659936,
+      "kinetic_kj_mol": 1853.6922473946213,
+      "temperature_K": 277.29842303307794
+    },
+    {
+      "production_step": 1280,
+      "time_ps": 2.56,
+      "potential_kj_mol": -3215.4737722634827,
+      "kinetic_kj_mol": 1952.1061303796976,
+      "temperature_K": 292.02039999267294
+    },
+    {
+      "production_step": 1536,
+      "time_ps": 3.072,
+      "potential_kj_mol": -3236.5864066941353,
+      "kinetic_kj_mol": 1930.438793496817,
+      "temperature_K": 288.77912930311055
+    },
+    {
+      "production_step": 1792,
+      "time_ps": 3.584,
+      "potential_kj_mol": -3194.8176464733324,
+      "kinetic_kj_mol": 2017.6016195698019,
+      "temperature_K": 301.8180327408934
+    },
+    {
+      "production_step": 2048,
+      "time_ps": 4.096,
+      "potential_kj_mol": -3159.7855501145823,
+      "kinetic_kj_mol": 1971.8204224638416,
+      "temperature_K": 294.96950986451395
+    },
+    {
+      "production_step": 2304,
+      "time_ps": 4.6080000000000005,
+      "potential_kj_mol": -3247.701503124741,
+      "kinetic_kj_mol": 2014.5752470539708,
+      "temperature_K": 301.36531016662025
+    },
+    {
+      "production_step": 2560,
+      "time_ps": 5.12,
+      "potential_kj_mol": -3177.4755047528724,
+      "kinetic_kj_mol": 1953.5382826233354,
+      "temperature_K": 292.23463920053615
+    },
+    {
+      "production_step": 2816,
+      "time_ps": 5.632,
+      "potential_kj_mol": -3119.7473401275665,
+      "kinetic_kj_mol": 1971.9228970203717,
+      "temperature_K": 294.98483928770526
+    },
+    {
+      "production_step": 3072,
+      "time_ps": 6.144,
+      "potential_kj_mol": -3133.724390610934,
+      "kinetic_kj_mol": 1915.3354039099731,
+      "temperature_K": 286.51977577731765
+    },
+    {
+      "production_step": 3328,
+      "time_ps": 6.656000000000001,
+      "potential_kj_mol": -3161.369937221588,
+      "kinetic_kj_mol": 1810.5856874400351,
+      "temperature_K": 270.8500057650076
+    },
+    {
+      "production_step": 3584,
+      "time_ps": 7.168,
+      "potential_kj_mol": -3146.099830238736,
+      "kinetic_kj_mol": 1892.2561985916166,
+      "temperature_K": 283.0673001850871
+    },
+    {
+      "production_step": 3840,
+      "time_ps": 7.68,
+      "potential_kj_mol": -3193.1708682384246,
+      "kinetic_kj_mol": 1939.0254174860002,
+      "temperature_K": 290.0636236924705
+    },
+    {
+      "production_step": 4096,
+      "time_ps": 8.192,
+      "potential_kj_mol": -3129.5721970835502,
+      "kinetic_kj_mol": 2065.9561738728185,
+      "temperature_K": 309.05151050589984
+    },
+    {
+      "production_step": 4352,
+      "time_ps": 8.704,
+      "potential_kj_mol": -3073.027699523056,
+      "kinetic_kj_mol": 1964.876192872288,
+      "temperature_K": 293.9307053285269
+    },
+    {
+      "production_step": 4608,
+      "time_ps": 9.216000000000001,
+      "potential_kj_mol": -3205.1295951098973,
+      "kinetic_kj_mol": 2023.1761847324474,
+      "temperature_K": 302.6519457762796
+    },
+    {
+      "production_step": 4864,
+      "time_ps": 9.728,
+      "potential_kj_mol": -3143.495710317733,
+      "kinetic_kj_mol": 2025.2569912699907,
+      "temperature_K": 302.9632187895366
+    },
+    {
+      "production_step": 5120,
+      "time_ps": 10.24,
+      "potential_kj_mol": -3115.829466214629,
+      "kinetic_kj_mol": 2141.669813593166,
+      "temperature_K": 320.3777017472216
+    },
+    {
+      "production_step": 5376,
+      "time_ps": 10.752,
+      "potential_kj_mol": -3119.800491926567,
+      "kinetic_kj_mol": 2052.622097035753,
+      "temperature_K": 307.05683286471265
+    },
+    {
+      "production_step": 5632,
+      "time_ps": 11.264,
+      "potential_kj_mol": -3172.620249331271,
+      "kinetic_kj_mol": 2035.2047679759066,
+      "temperature_K": 304.45133139135214
+    },
+    {
+      "production_step": 5888,
+      "time_ps": 11.776,
+      "potential_kj_mol": -3105.4768494097716,
+      "kinetic_kj_mol": 1974.5181153536594,
+      "temperature_K": 295.3730644379473
+    },
+    {
+      "production_step": 6144,
+      "time_ps": 12.288,
+      "potential_kj_mol": -3159.375343618335,
+      "kinetic_kj_mol": 2024.7467957740137,
+      "temperature_K": 302.8868973792961
+    },
+    {
+      "production_step": 6400,
+      "time_ps": 12.8,
+      "potential_kj_mol": -3265.395716491591,
+      "kinetic_kj_mol": 2057.2721452179376,
+      "temperature_K": 307.7524451108985
+    },
+    {
+      "production_step": 6656,
+      "time_ps": 13.312000000000001,
+      "potential_kj_mol": -3255.5948185489397,
+      "kinetic_kj_mol": 1978.5505452313123,
+      "temperature_K": 295.97628562940247
+    },
+    {
+      "production_step": 6912,
+      "time_ps": 13.824,
+      "potential_kj_mol": -3115.1124683642774,
+      "kinetic_kj_mol": 1838.7453089968487,
+      "temperature_K": 275.0624734288756
+    },
+    {
+      "production_step": 7168,
+      "time_ps": 14.336,
+      "potential_kj_mol": -3170.591514923432,
+      "kinetic_kj_mol": 1933.9577536679876,
+      "temperature_K": 289.30553928705115
+    },
+    {
+      "production_step": 7424,
+      "time_ps": 14.848,
+      "potential_kj_mol": -3066.0700169396264,
+      "kinetic_kj_mol": 1984.6949693513961,
+      "temperature_K": 296.89544528027784
+    },
+    {
+      "production_step": 7680,
+      "time_ps": 15.36,
+      "potential_kj_mol": -3136.9443030826533,
+      "kinetic_kj_mol": 1998.2232555448688,
+      "temperature_K": 298.9191751810004
+    },
+    {
+      "production_step": 7936,
+      "time_ps": 15.872,
+      "potential_kj_mol": -3199.180572381106,
+      "kinetic_kj_mol": 2025.7322109804327,
+      "temperature_K": 303.0343080852301
+    },
+    {
+      "production_step": 8192,
+      "time_ps": 16.384,
+      "potential_kj_mol": -3206.587850205065,
+      "kinetic_kj_mol": 1946.8808964382736,
+      "temperature_K": 291.2387442814985
+    }
+  ],
+  "topology_fixed": true,
+  "frames": 67,
+  "production_ps": 16.384,
+  "short_trajectory_not_equilibrium_ensemble": true
+}

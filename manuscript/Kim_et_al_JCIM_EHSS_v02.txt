@@ -1,0 +1,191 @@
+# Efficient CPU Evaluation of Molecular Exact Hard Sphere Scattering
+
+## Abstract
+
+Exact hard sphere scattering (EHSS) collision cross sections require repeated collision searches and an ensemble average over incident trajectories. We combine analytical sphere collisions, native scalar bounding volume hierarchy traversal, and scrambled Sobol sampling in a static CPU implementation, and separate geometric search from sampling effects through controlled ablations. In a same-computer comparison with IMoS 1.13, both methods satisfied independently evaluated 1% and 0.5% relative root-mean-square error targets for two development structures; in a separate 18-structure cohort spanning 92 to 49,676 atoms, our implementation passed a practical 2% target on 17 structures and IMoS on 16, with single-process median time ratios of 2.58 to 14.55 in favor of our implementation on the 15 jointly passing structures. These results support lower execution time under the tested static helium EHSS conditions, while preserving uncertain accuracy outcomes, accounting for unresolved sampled paths, and distinguishing implementation performance from hard-sphere model accuracy.
+
+Keywords: ion mobility; collision cross section; exact hard sphere scattering; bounding volume hierarchy; randomized quasi Monte Carlo; CPU computation
+
+## Introduction
+
+Collision cross sections (CCSs) connect ion mobility measurements with structural models of molecules and molecular assemblies. Their computational interpretation depends on both the assumed gas-molecule interaction and the numerical method used to average scattering. The exact hard-spheres scattering (EHSS) model represents a molecule by collision spheres and follows successive elastic, specular reflections.{{1}} Unlike the projection approximation (PA), which records whether an incident trajectory intersects the molecule, EHSS retains the momentum transfer associated with the complete scattering path. This distinction matters when a trajectory strikes several atoms before escaping.
+
+Two costs enter a numerical EHSS estimate. Each trajectory requires identifying its next collision, possibly many times, and many incident trajectories are needed to estimate the orientationally averaged momentum transfer. Improving the geometric search reduces the cost per sampled path. Improving the incident sample can reduce the number of paths required at a chosen error target. These benefits should be measured separately: identical requested ray counts need not give identical errors, and a faster inner loop need not translate into the same factor of improvement in complete program execution.
+
+Efficient CCS computation has a substantial history. Rotation-reduced and rotation-free EHSS algorithms already avoid repeated work associated with changing molecular orientation.{{2}} Boundary-based free-molecular formulations describe incidence, scattering, and drag using enclosing control surfaces.{{3}} IMoS provides established implementations and multiprocess execution,{{4}} while MassCCS demonstrates spatial and sampling acceleration for the distinct trajectory-method model.{{5}} Bounding volume hierarchies (BVHs) are also standard ray-intersection acceleration structures.{{6}} Fixed molecular coordinates, spatial hierarchies, and analytical sphere intersections are therefore established ingredients rather than claims of novelty by themselves.
+
+Here we evaluate their integration in a compact static CPU implementation. A common native scattering loop permits a factorial comparison of exhaustive atom search versus BVH traversal and independent random versus scrambled Sobol incidence. The external comparison uses IMoS 1.13 on the same computer, with separately calibrated settings, new evaluation seeds, and repeated complete-process timing. We report a two-structure comparison at 1% and 0.5% relative root-mean-square error (RMSE), followed by a practical 2% comparison on 18 additional structures. The contribution is a tested implementation and an evidence-based separation of search, sampling, and execution costs for the specified EHSS observable. PA and geometry-reuse results provide context for the resulting focus on static structures.
+
+## Computational Methods
+
+### Collision model and molecular inputs
+
+We evaluate elastic, specular scattering from a fixed union of atomic collision spheres. The radius of atom j is its assigned bare radius plus a 1.4 Å helium probe radius. Bare radii are 1.70, 1.55, 1.52, and 1.80 Å for C, N, O, and S, respectively, in the 18-structure panel. Coordinates and radii are in angstroms, and CCS is in Å². Identical coordinates and effective radii were supplied to both implementations. Long-range interactions, trajectory-method calculations, diffuse scattering, and accommodation are outside the selected calculation. The radius convention is a numerical comparison convention, not a fitted prediction of experimental helium CCS.
+
+The six development structures were 1CRN, 1BNA, 1LYZ, 4AKE, 1IGT, and 1AON, with 327 to 58,674 retained atoms. An additional panel of 18 PDB entries was selected and frozen before their EHSS performance was measured. Coordinates and entry metadata were obtained from the RCSB PDB.{{7}} We retained the first deposited model, all ATOM chains, alternate-location labels blank or A, and positive-occupancy records; H, D, HETATM records, and waters were excluded. No biological-assembly expansion, hydrogen addition, gas-phase relaxation, or energy minimization was applied to this panel. These are deposited coordinate geometries rather than claimed gas-phase conformers. Source files, exclusions, atom counts, radii, and file hashes define the actual inputs (Supporting Information, Table S1).
+
+The panel contains six structures in each of three size groups and spans 92 to 49,676 atoms. Its gyration-axis classification comprises six elongated and twelve axis-compact geometries. It is not a complete balanced size-by-shape design, and axis compactness does not imply absence of cavities. Development structures and additional evaluation structures are reported separately. The latter were used for per-structure budget calibration before independent final seeds; they are not an unseen test of a universal budget-prediction rule.
+
+### Incident measure and scalar CCS estimator
+
+Let c be the mean atomic center and let R enclose every collision sphere, with a relative margin of 10⁻⁹. For each trajectory, the incident unit direction u is uniform on S². Conditional on u, the impact point is uniform on the perpendicular disk of radius R, and the origin is placed upstream of the molecule. Sampling both direction and impact position covers the complete incident measure; directions are not restricted to enclosing-surface normals. A four-dimensional Sobol point supplies two coordinates for direction and two for disk position. SciPy implements a left linear matrix scramble followed by a digital random shift.{{8}} Each independent block uses n = 2ᵐ points without thinning or dropping the first point. One production estimate pools three independently scrambled blocks with equal weights, giving N = 3n trajectories; these are not three fixed molecular views.
+
+For incident and escaped unit directions uᵢ and vᵢ, respectively, the estimator is
+
+Ω̂ = Σᵢ∈escaped wᵢ (1 − uᵢ · vᵢ),     wᵢ = πR²/N
+
+A ray that misses the molecule contributes zero. The corresponding PA estimator sums wᵢ over intercepted rays. Both estimators use the same external incident measure, but PA omits the subsequent scattering information. Numerical sampling uncertainty is assessed across independent complete estimates, not by treating the correlated points inside a scrambled block as independent replicates.
+
+### Static preparation and nearest collision search
+
+Atoms are grouped by recursively sorting their centers along the longest center-span axis and splitting at the median. The target leaf size is four atoms, with termination for zero span or depth 24. Padded axis-aligned bounding boxes enclose the complete collision spheres; internal boxes combine their descendants. Contiguous arrays store bounds, leaf membership, and subtree end indices for stackless traversal. The static preparation path omits motion and response-cache metadata and uses compiled scalar routines for grouping and bounds. Atom spheres remain the physical scattering surfaces; the hierarchy is not a triangular surface approximation or a coarse-grained collision model.
+
+For origin o and unit direction d, define a = (cⱼ − o) · d and b² = |cⱼ − o|² − a². A candidate forward sphere-entry distance is
+
+t = a − √(Rⱼ² − b²)
+
+The kernel rejects a negative discriminant and invalid backward entries, retaining the direction-norm factor in its implementation. It clamps only small negative entry distances within 64 machine epsilons times the sphere radius. BVH traversal skips a subtree when its ray-box interval cannot contain a nearer admissible collision. Equal-distance collisions use a deterministic atom-identity rule. At the nearest sphere, the normalized surface normal n determines the reflection,
+
+d′ = d − 2(d · n)n
+
+The direction is renormalized, the origin is restored to the sphere surface, and the immediately preceding atom is excluded from the next query. Molecular coordinates remain fixed while the ray state changes. The implementation uses float64 scalar native kernels compiled with Numba; Python orchestrates input, preparation, sampling, and readout. No approximate support response is substituted for the collision sequence (Figure 1).
+
+### Termination and reference calculations
+
+After the specified collision cap, a further nearest-hit query distinguishes escape from an unresolved path. Since 0 ≤ 1 − u · v ≤ 2, the uncomputed contribution of unresolved sampled rays obeys
+
+0 ≤ ΔΩsample ≤ 2 Σᵢ∈unresolved wᵢ
+
+This is a bound on the selected finite sample, not on unseen rare paths, incident-sampling error, or physical model error. We retain collision histograms, escaped CCS grouped by collision count, unresolved weight, and every cap attempt. Production evaluation begins at cap 512 and retraces the same rays at 1,024, 2,048, and 4,096 when the sampled bound exceeds 0.05% of the computed CCS. All retracing cost is included. A final own-method accuracy result also requires a sampled bound no greater than one tenth of its RMSE target.
+
+The additional-panel primary reference uses eight independent sphere-boundary estimates of 2²⁰ rays per structure. Eight independent box-boundary estimates of 2¹⁸ rays provide a second incidence formulation using the same production collision kernel. Reference caps start at 1,024 and extend to 4,096 if the sampled residual exceeds 0.01%. Primary reference uncertainty is described by a Student t interval over its eight independent estimates. The box results are a cross-check and are not pooled into the primary reference. A separately implemented exhaustive intersection/reflection routine checks matched-ray collision histories and escaped directions on a total subset of 13,824 rays. Thus the independent-kernel check is distinct from the two-boundary comparison.
+
+### Controlled ablations and external comparison
+
+The native ablation crosses exhaustive atom search or BVH traversal with independent identically distributed (IID) or scrambled Sobol incidence. Six development structures, four ray budgets from 256 to 16,384, and eight independent seeds per sampler and budget produce 768 method runs. Flat/BVH pairs share rays and the scalar scattering rules. For 4AKE, 1IGT, and 1AON, cap-4,096 replays replace the cap-64 observations in the final accuracy analysis; they do not add independent replicates. Instrumented operation counts were collected separately from timings. This campaign used the local i5-7500 computer; its times are never divided by laboratory IMoS times.
+
+IMoS 1.13 was run on the laboratory Intel Core i5-12400F under Windows 11 with one requested thread and the selected elastic/specular helium settings. PA, potential, and trajectory-method modes were disabled. The comparator is the regular CCS output. Simplify = 0 and 1 were evaluated as separate calibration arms according to the distributed interface and manual.{{9}} Numerical drag tensors were not available from the tested outputs, so we do not claim source-level equivalence of tensor normalization or substitute the Happel-Brenner output for regular CCS. Analytical-sphere, radius, rotation, and molecular-reference checks support the chosen comparison while leaving this limitation explicit.
+
+Per-structure settings were selected from finite calibration grids before new evaluation seeds were used. For the two-structure campaign, settings for 1CRN and 1LYZ at 1% and 0.5% RMSE were evaluated with 20 new seeds each, giving 160 final estimates. For the 18-structure campaign, the 2% target was chosen after the preceding study to assess a practical runtime regime. Existing IMoS calibration comprised 1,056 estimates across 132 cells; the own-method calibration comprised 816 estimates across 102 cells. Eligible settings satisfied the calibration RMSE interval criterion and, for our method, the sampled-tail criterion. Selection minimized the observed eligible internal median time on each method's calibration host. This finite-grid proxy is not a global optimum or an optimization of complete-process latency.
+
+Both methods were frozen before 20 new seeds per structure, giving 720 final estimates. Earlier own-method holdout outcomes were not used in this selection. The prior 1RYP Simplify = 1 technical failure excluded that arm; 1RYP itself remained in the panel with Simplify = 0. No setting was retuned after the new final results. Earlier 1% and 0.5% outcomes remain separate rather than being retrospectively relabeled under the new target.
+
+### Error statistics and timing scope
+
+For replicate r and primary reference Ωref, the relative error in percent is eᵣ = 100(Ω̂ᵣ/Ωref − 1). We report RMSE = √mean(eᵣ²), sample mean discrepancy, and sample standard deviation. Percentile intervals from 20,000 bootstrap draws resample complete evaluation runs and reference replicates. A setting passes when its RMSE interval upper endpoint is no greater than the target, fails when its lower endpoint exceeds the target, and is otherwise uncertain. These are pointwise finite-sample decisions rather than simultaneous population-error guarantees. A per-structure time comparison is qualified at the target only if both methods pass.
+
+Complete-process time is measured from Popen to natural exit. It includes process startup, imports/runtime and applicable cache loading, input/output inside the process, and fresh geometry. Inputs and job specifications already exist at process launch; structure download, format conversion, installation, wrapper preparation, and result archiving are outside this window. Code cache is present after prior use or an excluded warmup; this is not an operating-system cold-cache benchmark. The machine was used through Chrome Remote Desktop without exclusive CPU isolation. Our laboratory environment records Python 3.13.15, NumPy 2.5.3, SciPy 1.18.0, and Numba 0.67.0.
+
+Ten paired timing blocks were used for the two-structure campaign and five for the additional panel. Single-process and actual batch execution replay the same timing seeds, separate from accuracy seeds; method and single/batch ordering alternate. Ratios are ratios of method medians, not medians of per-block ratios. Paired-block bootstrap intervals use 20,000 draws for ten blocks and all 5⁵ = 3,125 resamples for five blocks. Five-block intervals have limited resolution. Internal geometry, source, tracing, and readout times are retained separately; the opaque IMoS internal timer is not assumed to have identical endpoints.
+
+## Results and Discussion
+
+### Numerical validation and separation of search and sampling effects
+
+The preserved core suite passed 72 tests covering analytical sphere scattering, nearest collision order, near-gap and grazing cases, trapped paths, cap bounds, backends, and CLI behavior. Co-moving rotation, translation, scale, and atom-order checks preserved the tested scattering histories and the expected area scaling. The independent kernel agreed on all 13,824 additional-panel test rays. All 18 primary reference intervals had relative half-widths below 0.1%, ranging from 0.01094% to 0.04748%; the largest primary sampled residual bound was 0.00974%. Sphere and box reference intervals overlapped for every structure. Agreement between these boundaries is a useful check, not an equivalence test or an independent-kernel validation by itself.
+
+All 384 original flat/BVH pairs and 192 large-structure replay pairs preserved matched-ray scattering states exactly. At 16,384 Sobol rays, the ratio of preparation-inclusive exhaustive-search time to BVH time increased from 2.02 for 1CRN to 54.55 for 1AON in the six-structure control (Table 1). The larger cases use the cap-4,096 replacement results. These are local native traversal comparisons at identical rays and caps. They establish a search benefit within the tested implementation, independently of the external IMoS comparison.
+
+{"label": "1", "title": "Native traversal and sampler controls at 16,384 rays", "headers": ["Input", "Atoms", "IID RMSE\n%", "Sobol RMSE\n%", "Flat\nms", "BVH\nms", "Time\nratio"], "rows": [["1CRN", "327", "1.103", "0.251", "59.71", "29.51", "2.02"], ["1BNA", "486", "1.044", "0.419", "82.28", "27.57", "2.98"], ["1LYZ", "1001", "1.276", "0.209", "159.68", "33.43", "4.78"], ["4AKE", "3312", "1.317", "0.503", "560.94", "52.04", "10.78"], ["1IGT", "10196", "0.956", "0.390", "1561.95", "58.82", "26.55"], ["1AON", "58674", "0.872", "0.410", "13860.33", "254.07", "54.55"]], "widths": [0.65, 0.65, 0.92, 0.92, 0.85, 0.85, 0.66], "note": "Eight repeats per cell, local i5-7500; times are medians of preparation + source + trace + readout for Sobol. Large three inputs use cap 4,096; other inputs use cap 64. Time ratio is flat/BVH at identical rays and cap. This table is not an IMoS comparison."}
+
+Changing only the native incidence from IID to scrambled Sobol reduced estimated RMSE by factors of 2.12 to 6.11 at 16,384 rays. Each pointwise bootstrap interval for this ratio lay above one, although lower-budget curves sometimes crossed (Figure 2). This supports improved sample efficiency at the reported budget. It does not establish a universal convergence exponent: for 1AON, empirical RMSE exponents were 0.479 for Sobol and 0.486 for IID over the finite grid despite the lower Sobol error level. Search speed and RMSE ratios describe different quantities and are not multiplied to infer an external speedup.
+
+### Comparison with IMoS at the same error target
+
+Both methods passed the 1% and 0.5% targets for 1CRN and 1LYZ in their new 20-seed cohorts. Complete-process median time ratios were 2.86 and 4.08 at 1%, and 3.38 and 5.45 at 0.5%, for 1CRN and 1LYZ, respectively (Table 2). Actual two-structure batch ratios were 4.49 and 6.46 at the respective targets. The independently evaluated errors support these comparisons at a common target, although the achieved RMSE values are not identical. Internal timer ratios are larger but are not used as complete-execution speedups.
+
+{"label": "2", "title": "Independent accuracy and same-computer single-process time", "headers": ["Input", "Target\n%", "Own RMSE\n%", "IMoS RMSE\n%", "Own\ns", "IMoS\ns", "Ratio\n[95%]"], "rows": [["1CRN", "1", "0.651", "0.694", "3.548", "10.138", "2.86\n[2.80, 3.11]"], ["1LYZ", "1", "0.620", "0.472", "3.602", "14.681", "4.08\n[4.03, 4.17]"], ["1CRN", "0.5", "0.263", "0.351", "3.621", "12.241", "3.38\n[3.36, 3.53]"], ["1LYZ", "0.5", "0.213", "0.281", "3.673", "20.003", "5.45\n[5.38, 5.55]"]], "widths": [0.63, 0.57, 0.88, 0.88, 0.75, 0.75, 1.04], "note": "Twenty new seeds per method/setting for accuracy; ten paired blocks for timing. Both methods pass every listed target. Ratios are IMoS/own median complete-process times. The achieved errors differ despite satisfying the same target."}
+
+On the additional 18 structures at the new 2% target, our implementation passed 17 settings and IMoS passed 16. Three method/structure cases were uncertain: our 1SU4 result had RMSE 2.017% with a 95% interval of 1.508% to 2.477%; IMoS 1AL1 had 1.656% [1.012%, 2.238%], and IMoS 1BMF had 1.923% [1.325%, 2.501%]. Neither method had a definite failure under the interval rule. All conditions are retained in Figure 3 and the Supporting Information. No extra final seeds or calibration changes were used to resolve the uncertain outcomes.
+
+Both methods passed on 15 structures. Their single-process median time ratios ranged from 2.58 to 14.55 in favor of our implementation (Figure 4). For example, 1RYP required 55.34 s with IMoS and 3.80 s with our implementation. The full 18-structure batch required 103.66 s and 4.33 s, respectively, giving a latency ratio of 23.94 [23.75, 24.50]. Because that batch includes the uncertain cases, its ratio is an observed workload-latency comparison rather than an all-18 demonstration at validated 2% accuracy. A passing-only batch time cannot be reconstructed by subtracting separately measured single-input times.
+
+Across the completed 18-structure campaign, 720 final estimates, 360 timing replays, and one excluded warmup were executed in 281 processes without missing results or process anomalies. Single and batch numerical outputs agreed exactly for each paired replay. Timings describe this CPU, runtime, finite setting grid, and static helium calculation. They are not rankings across all CCS packages, all molecular structures, or all parallel configurations.
+
+### Why the observed convergence differs
+
+The convergence analysis of archived fixed-grid results supports a substantial contribution from sampling and estimator efficiency. At 196,608 incident trajectories in the two-structure calibration, IMoS run-to-run variance accounted for 96.1% and 96.7% of observed mean-squared error for 1CRN and 1LYZ. The corresponding IMoS-to-own RMSE ratios were 4.47 and 8.15. Thus these particular error gaps largely reflect repeat variability rather than a large mean offset. The native sampler ablation isolates an improvement from Sobol incidence within a common collision and readout implementation.
+
+The complete IMoS difference cannot be attributed to Sobol sampling alone. Its incidence and drag-estimation formulation differ, and the unavailable numerical tensor prevents a full reconstruction of the distributed estimator. Empirical exponents also vary with structure and budget: the shallow initial IMoS 1LYZ curve does not establish a permanent error floor, and the broader calibration panel has different budget ranges and adaptive extensions. We therefore interpret reduced finite-sample dispersion as evidence for the combined sampling/estimation pathway, while reserving the causal sampler conclusion for the native IID/Sobol control. Rotation diagnostics on three synthetic shapes, twelve orientations, and eight seeds found no warning under the stated Welch/Holm rule; this is not proof of exact rotational invariance or tensor equivalence.
+
+### Rare paths and complete execution costs
+
+Rare paths can carry disproportionate momentum transfer. In the large-structure native controls, the original cap 64 left unresolved trajectories; the cap-4,096 replays retained paths with as many as 1,160 collisions. Their CCS increases remained within the earlier sampled residual bounds. In the final additional-panel evaluation, a completed 1BMF path reached 2,348 collisions. One sampled 1TIM path remained unresolved, with a bound of 0.0479% of that run's computed CCS (Table S8). Consequently, we do not infer a universal safe collision cutoff from the frequency of short paths. Equation 4 and the retained cap-extension records qualify the finite computation without erasing long-path contributions. IMoS does not provide a directly corresponding sampled-tail certificate in the tested output.
+
+Preparation, source generation, and process overhead affect the practical benefit of fast tracing. Scalar kernels reduce small-array overhead, while the static builder avoids response and motion metadata. Fresh geometry is nevertheless included in every reported final execution. Batch execution amortizes process/runtime work across structures, explaining why its benefit can differ from individual program launches. It does not imply response reuse between molecules. The variable final ray budgets and heterogeneous geometries also mean that the final time-versus-atom-count observations are workload measurements, not a fitted computational complexity law.
+
+### PA and implications for support transport
+
+The supporting PA study illustrates the same distinction between per-sample speed and controlled-error performance. With a continuous projected-disk-union reference, adaptive spatial PA was approximately 1.16 and 2.44 times faster than BVH sampling at the 0.1% target for 1CRN and 1LYZ, respectively, including preparation; BVH sampling was faster in some less stringent conditions. These PA results motivate error-based comparisons but do not establish an EHSS speedup or a general advantage over octree PA software.
+
+The present static solver also clarifies which elements may transfer to a broader support-transport framework. Conservative candidate bounds, exact local collision response, a jointly sampled position-direction state, and an explicit unresolved-contribution bound are reusable computational components. A cached response would additionally have to preserve its dependence on incident position and direction and on the subsequent geometry. The current performance results use direct atom-sphere scattering; they do not validate compressed cone responses, a general support hierarchy, or response interpolation.
+
+Small molecular displacement is not equivalent to sparse geometric change. In the earlier short MD observations, all 146 groups in 1CRN and all 480 groups in 1LYZ moved at every successive update across 67 frames over 16.384 ps. Update-plus-direct calculations were only 1.04 and 1.03 times faster than rebuild-plus-direct in the tested cases, and high local response reuse did not accelerate the complete field calculation. Broadly distributed changes force bounds and response validity to be reconsidered throughout the structure. These observations limit a general MD acceleration claim; constrained motion of a few terminal groups would be a separate regime rather than a demonstrated application here.
+
+## Conclusions
+
+The static CPU implementation combines exact analytical atom-sphere collisions, native BVH search, and scrambled Sobol incidence with explicit sampled-path termination diagnostics. Controlled native ablations distinguish reduced collision-search cost from reduced finite-sample RMSE. Independent same-computer comparisons with IMoS 1.13 support shorter complete execution at validated 1% and 0.5% targets for two development structures and at a practical 2% target for the 15 jointly passing structures of an additional 18-structure cohort. Uncertain accuracy cases, earlier stricter-target outcomes, and the distinction between single-process and batch timing remain part of the result. The evidence supports the tested static helium EHSS implementation rather than universal CCS acceleration, experimental model accuracy, or acceleration of general MD trajectories.
+
+## Data and Software Availability
+
+[PLACEHOLDER DATA-01: Insert the author-approved public repository and archival DOI, version, license, access conditions for code and benchmark data, and the final availability statement. The reproducibility snapshot exists locally; public availability must not be asserted before release.]
+
+## Associated Content
+
+### Supporting Information
+
+Input selection and provenance; reference and numerical validation; complete frozen settings, accuracy outcomes and timings; earlier calibration and holdout outcomes; collision-tail, sampling, PA and reuse evidence; reproducibility instructions and file index (PDF). Machine-readable numerical tables and figure source data (CSV and JSON).
+
+## Author Information
+
+### Corresponding Author
+
+Jongcheol Seo, Department of Chemistry and Division of Interdisciplinary Bioscience and Bioengineering (I-BIO), Pohang University of Science and Technology (POSTECH), Pohang 37673, Republic of Korea. Email: jongcheol.seo@postech.ac.kr.
+
+### Author Contributions
+
+[PLACEHOLDER CONTRIB-01: Insert the author-approved contribution statement for Minsu Kim, Minwook Hwang, and Jongcheol Seo.]
+
+### Funding Sources
+
+The authors acknowledge support from the Samsung Science and Technology Foundation (Grant No. SSTF-BA-2002-07) and the National Research Foundation of Korea (NRF) funded by the Ministry of Science and ICT (MSIT) (Grant No. RS-2026-25474396). This work is also supported by the Center for Quantum Dynamics (CQD), POSTECH (Grant No. RS-2020-NR049542) and Basic Science Research Institute (BSRI), POSTECH (Grant No. RS-2021-NR060139), both provided via NRF and funded by MSIT.
+
+### Notes
+
+The authors declare no conflicts of interest.
+
+## Acknowledgements
+
+[PLACEHOLDER ACK-01: Insert the author-approved acknowledgements and any required disclosure of assistance in preparing the manuscript.]
+
+## References
+
+(1) Shvartsburg, A. A.; Jarrold, M. F. An Exact Hard-Spheres Scattering Model for the Mobilities of Polyatomic Ions. Chem. Phys. Lett. 1996, 261, 86-91. https://doi.org/10.1016/0009-2614(96)00941-4
+
+(2) Shvartsburg, A. A.; Mashkevich, S. V.; Baker, E. S.; Smith, R. D. Optimization of Algorithms for Ion Mobility Calculations. J. Phys. Chem. A 2007, 111, 2002-2010. https://doi.org/10.1021/jp066953m
+
+(3) Larriba, C.; Hogan, C. J., Jr. Free Molecular Collision Cross Section Calculation Methods for Nanoparticles and Complex Ions with Energy Accommodation. J. Comput. Phys. 2013, 251, 344-363. https://doi.org/10.1016/j.jcp.2013.05.038
+
+(4) Shrivastav, V.; Nahin, M.; Hogan, C. J.; Larriba-Andaluz, C. Benchmark Comparison for a Multi-Processing Ion Mobility Calculator in the Free Molecular Regime. J. Am. Soc. Mass Spectrom. 2017, 28, 1540-1551. https://doi.org/10.1007/s13361-017-1661-8
+
+(5) Cajahuaringa, S.; Caetano, D. L. Z.; Zanotto, L. N.; Araujo, G.; Skaf, M. S. MassCCS: A High-Performance Collision Cross-Section Software for Large Macromolecular Assemblies. J. Chem. Inf. Model. 2023, 63, 3557-3566. https://doi.org/10.1021/acs.jcim.3c00405
+
+(6) Pharr, M.; Jakob, W.; Humphreys, G. Physically Based Rendering: From Theory to Implementation, 4th ed.; MIT Press, 2023. Chapter 7, Bounding Volume Hierarchies. https://www.pbr-book.org/4ed/Primitives_and_Intersection_Acceleration/Bounding_Volume_Hierarchies (accessed September 14, 2026).
+
+(7) RCSB Protein Data Bank. Structure Coordinate Files and Data API Entry Metadata. https://www.rcsb.org/; https://data.rcsb.org/ (benchmark files retrieved September 13, 2026). Individual entry citations and retained coordinate hashes are listed in the Supporting Information and accompanying data.
+
+(8) SciPy Community. scipy.stats.qmc.Sobol, SciPy 1.18.0 Reference Guide. https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.qmc.Sobol.html (accessed September 14, 2026).
+
+(9) IMoSPedia. IMoS 1.13 Manual. https://www.imospedia.com/imos/explanation-of-the-code/ (accessed September 14, 2026).
+
+## Figures
+
+Figure 1. Static EHSS calculation. Four-dimensional incidence supplies direction and impact position; native BVH traversal locates the nearest analytical sphere entry, followed by specular reflection until escape or a flagged cap. The synthetic path is an illustration verified against the separate collision routine, not a performance sample. The sampled residual bound and warm components are distinct from ensemble error and complete-process time.
+
+Figure 2. Native sampling control. Relative RMSE across four ray budgets for IID and scrambled Sobol incidence on six development structures. Each point uses eight independent estimates; bars are pointwise 95% run/reference bootstrap intervals. Large-case cap-4,096 replays replace cap-64 results without adding replicates. These curves isolate incidence within a common scattering implementation and do not establish a universal asymptotic convergence order.
+
+Figure 3. Independent 2% evaluation on all 18 additional structures. Each method/structure has twenty new estimates. Points show RMSE and bars its pointwise run/reference bootstrap interval; the dashed line is the target. Filled markers pass and open markers are uncertain. The panel is sorted by retained atom count. Our method passes 17/18 and IMoS 16/18, with fifteen jointly passing cases; no definite failures occur under the interval rule.
+
+Figure 4. Same-computer complete-process timing over five paired blocks. (a) IMoS/own ratios of median single-input times with paired-bootstrap intervals. Filled circles denote jointly passing 2% cases; open diamonds are workload timings with an uncertain accuracy outcome. (b) Actual all-18 batch medians include uncertain cases and are not an all-18 target-qualified speedup. Inputs exist before launch; runtime, process input/output and fresh geometry are included, with code cache present.
+
+## Table of Contents Graphic

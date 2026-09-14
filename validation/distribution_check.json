@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "no_new_benchmark_estimates": true,
+  "distribution_tests": {
+    "passed": 71,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Build optional MSVC comparison DLL first"
+  },
+  "extraction_verified_manifest_entries": 11655,
+  "wheel_build": true,
+  "installed_frozen_python_files_verified": 175,
+  "installed_cli_help_returncode": 0,
+  "environment_scope": "Existing Python dependency environment; isolated wheel target, not a fresh OS or dependency installation.",
+  "repository_visibility_at_preparation": "private",
+  "ehssrot_direct_comparison": false,
+  "data_doi_created": false,
+  "public_release_license_added": false
+}

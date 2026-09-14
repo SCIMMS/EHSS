@@ -1,0 +1,48 @@
+usage: -c [-h] [--version] [--method {pa,ehss,both}]
+          [--pa-method {adaptive,bvh}] [--rays RAYS] [--directions DIRECTIONS]
+          [--grid-size GRID_SIZE] [--repeats REPEATS] [--seed SEED]
+          [--threads THREADS] [--leaf-size LEAF_SIZE]
+          [--max-collisions MAX_COLLISIONS] [--probe-radius PROBE_RADIUS]
+          [--radii-json RADII_JSON] [--units {angstrom,nm}]
+          [--exclude-hydrogen] [--frame FRAME | --all-frames]
+          [--output OUTPUT]
+          xyz [xyz ...]
+
+PA/EHSS for isolated molecules in standard XYZ files (results in A^2).
+
+positional arguments:
+  xyz                   XYZ paths; quoted wildcard patterns also work on
+                        Windows
+
+options:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  --method {pa,ehss,both}
+  --pa-method {adaptive,bvh}
+  --rays RAYS           EHSS/BVH PA rays per replicate, power of two (default:
+                        16384)
+  --directions DIRECTIONS
+                        Adaptive PA directions per replicate, power of two
+                        (default: 64)
+  --grid-size GRID_SIZE
+                        Adaptive PA square midpoint grid, power of two
+                        (default: 512)
+  --repeats REPEATS     Independent scrambled Sobol replicates (default: 3)
+  --seed SEED
+  --threads THREADS     EHSS trace threads; PA/geometry remain serial
+  --leaf-size LEAF_SIZE
+                        Maximum spatial group size for XYZ BVH (default: 4)
+  --max-collisions MAX_COLLISIONS
+  --probe-radius PROBE_RADIUS
+                        Added probe radius in angstrom (default: 1.4, He
+                        scenario)
+  --radii-json RADII_JSON
+                        Overrides/additions to atomic VDW radii in angstrom,
+                        never effective radii
+  --units {angstrom,nm}
+                        Input coordinate units only
+  --exclude-hydrogen    Explicitly omit H; default includes every supplied
+                        atom
+  --frame FRAME         1-based frame selection (default: first frame)
+  --all-frames          Calculate every frame independently, no MD cache reuse
+  --output OUTPUT       New result directory; existing directory is preserved
